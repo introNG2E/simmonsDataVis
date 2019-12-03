@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when accessed 1`] = `
+<div
+  className="EmailEntry"
+>
+  <h1
+    className="ui header welcome"
+  >
+    Welcome to our survey
+  </h1>
+  <h3
+    className="ui header welcome"
+  >
+    New users please register with your email and fill out a survey
+  </h3>
+  <h3
+    className="ui header welcome"
+  >
+    Returning users can edit their survey and view their results
+  </h3>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui divided two column grid emailForms"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="stretched column"
+      >
+        <form
+          className="ui form emailInput"
+          onSubmit={[Function]}
+        >
+          <h5
+            className="ui header"
+          >
+            I am a new user
+          </h5>
+          <div
+            className="field emailInput"
+          >
+            <label>
+              Email Address
+            </label>
+            <form
+              className="ui form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="ui inverted dimmer"
+                onClick={[Function]}
+              >
+                <div
+                  className="content"
+                >
+                  <div
+                    className="ui mini disabled inverted inline loader"
+                  />
+                </div>
+              </div>
+              <input
+                autoComplete="off"
+                onChange={[Function]}
+                onClick={[Function]}
+                placeholder="Email"
+                value=""
+              />
+            </form>
+          </div>
+        </form>
+        <div
+          className="ui list"
+          role="list"
+        >
+          <div
+            className="item"
+            onClick={[Function]}
+            role="listitem"
+          >
+            <div
+              className="ui centered grid"
+            >
+              <div
+                className="center aligned column"
+              >
+                <button
+                  className="ui button"
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="item"
+            onClick={[Function]}
+            role="listitem"
+          />
+        </div>
+      </div>
+      <div
+        className="stretched column"
+      >
+        <form
+          className="ui form emailInput"
+          onSubmit={[Function]}
+        >
+          <h5
+            className="ui header"
+          >
+            I have submitted a survey
+          </h5>
+          <div
+            className="field emailInput"
+          >
+            <label>
+              Email Address
+            </label>
+            <form
+              className="ui form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="ui inverted dimmer"
+                onClick={[Function]}
+              >
+                <div
+                  className="content"
+                >
+                  <div
+                    className="ui mini disabled inverted inline loader"
+                  />
+                </div>
+              </div>
+              <input
+                autoComplete="off"
+                onChange={[Function]}
+                onClick={[Function]}
+                placeholder="Email"
+                value=""
+              />
+            </form>
+          </div>
+        </form>
+        <div
+          className="ui list"
+          role="list"
+        >
+          <div
+            className="item"
+            onClick={[Function]}
+            role="listitem"
+          >
+            <div
+              className="ui centered grid"
+            >
+              <div
+                className="center aligned column"
+              >
+                <button
+                  className="ui button"
+                  onClick={[Function]}
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="item"
+            onClick={[Function]}
+            role="listitem"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
