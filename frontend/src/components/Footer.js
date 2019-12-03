@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Responsive, Container, Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
+
 import '../styles/Footer.css'
 
 const Footer = () => {
@@ -16,6 +18,15 @@ const Footer = () => {
           </div>
         </div>
         <div className="footerleft">
+          <li>
+            <a href="">HOME</a>
+          </li>
+          <li>
+            <a href="">DATA</a>
+          </li>
+          <li>
+            <a href="">SURVEY</a>
+          </li>
           <div class="copyright">
           Copyright © 2019 Anh Chau
           </div>
