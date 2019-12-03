@@ -383,7 +383,7 @@ class DataPage extends Component {
         ///pass data to the backend, then parse, should be able to return data on a data request
         //if NOT, due the post, then pass array into get (students who match demo)
         axios.get(
-            'http://localhost:8080/api/students/data'
+            '/api/students/data'
         )
             .then(res => {
                 var d = [];
