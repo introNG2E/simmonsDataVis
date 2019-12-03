@@ -21,15 +21,15 @@ import './styles/App.css'
 function App() {
 
 
-const [unlock, setUnlock] = useState(0);
+const [unlock, setUnlock] = useState(0)
 const fakeAuth = {
   isAuthenticated: unlock,//times out and signs out of admin login after some time
   authenticate(cb) {
-    this.isAuthenticated = 1
+    this.isAuthenticated = 1;
     setTimeout(cb, 100)
   },
   signout(cb) {
-    this.isAuthenticated = 0
+    this.isAuthenticated = 0;
     setTimeout(cb, 100)
   }
 }

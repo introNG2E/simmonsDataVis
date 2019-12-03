@@ -18,7 +18,6 @@ class adminEntry extends Component {
 
 
   state = {
-    unlock: 0,
     password: "",
     submittedPassword: ""
     
@@ -37,12 +36,14 @@ class adminEntry extends Component {
     });
     if (password == "admin") { //was unable to implement props to check admin password
       alert("Successful Login");
-      this.setState({unlock: this.state.unlock + 1})
+      this.setState({unlock: this.state.unlock + 1});
       console.log(this.state.unlock);
       //this.props.isAuthenticated({true});
       this.props.history.push("/adminpanel");
     } else {
-     this.setState({unlock: this.state.unlock - 1})
+      this.setState(prevState => ({
+      unlock: !prevState.unlock}));
+      this.props.history.push("/adminpanel");
       alert("Unsuccessful Login");
     }
     /*this.props.dispatch(signUp(formData)).then(({isAuthenticated}) => {
