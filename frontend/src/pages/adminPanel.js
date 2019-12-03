@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   Button,
   Form,
@@ -13,6 +13,9 @@ import { Route, withRouter, Redirect } from "react-router-dom";
 class adminPanel extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      
+    }
   }
 
   onSurveyPress = () => {

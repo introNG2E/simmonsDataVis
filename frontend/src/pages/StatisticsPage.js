@@ -7,7 +7,8 @@ import SpiderChart from '../components/SpiderChart'
 import data from '../data/data.js'
 import '../styles/DataPage.css'
 import axios from 'axios';
-//import CsvDownload from 'react-json-to-csv' unable to import 
+import json2csv from "json2csv";
+//import { CSVLink } from "react-csv";
 class StatisticsPage extends Component {
 
     state = {
@@ -137,20 +138,24 @@ class StatisticsPage extends Component {
     }
 
     DownloadCSV(e) {
-      //const { Parser } = require('json2csv');
-              axios({
-        url: 'http://localhost:8080/api/students/', //your url
-        method: 'GET',
-        responseType: 'blob', // important
-      }).then((response) => {
-         const url = window.URL.createObjectURL(new Blob([response.data]));
-         const link = document.createElement('a');
-         link.href = url;
-         link.setAttribute('download', 'file.csv'); //or any other extension
-         document.body.appendChild(link);
-         link.click();
-      });
-      
+      const FileDownload = require('js-file-download');
+
+      axios.get(`http://localhost:8080/api/students/`)
+         .then((response) => {
+              const { Parser } = require('json2csv'); // converts json to csv and downloads it, flattens the survey data first
+ 
+              const fields = ['survey.gender', 'survey.raceEthnicity', 'survey.major', 'survey.E2',
+              'survey.E3','survey.E4','survey.E5','survey.E6','survey.E7','survey.E8','survey.E9'];
+              
+               
+              const json2csvParser = new Parser({ fields });
+              const csv = json2csvParser.parse(response.data);
+               
+              FileDownload(csv, 'report.csv');
+              
+         });
+
+
     }
     // Prints the data set that gets passed to Spider Chart. 
     test(e) {
@@ -267,8 +272,7 @@ class StatisticsPage extends Component {
                         <Icon name='users'/>{this.state.numObservations}
                     </Label>
                     <Button.Group floated="right">
-                            <Button color='grey' attached="right" size="small" onClick={this.addDataSet.bind(this)}>Add Dataset</Button>
-                            <Button color="grey" attached="right" size="small" onClick={this.removeDataSet.bind(this)}>Remove Dataset</Button>
+                          
                             <Button color="grey" attached="right" size="small" onClick={this.DownloadCSV.bind(this)}>Download CSV</Button>
                     </Button.Group>
                 </fieldset>

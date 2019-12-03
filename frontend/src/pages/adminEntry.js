@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   Button,
   Form,
@@ -15,7 +15,10 @@ class adminEntry extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+
   state = {
+    unlock: 0,
     password: "",
     submittedPassword: ""
     
@@ -34,8 +37,12 @@ class adminEntry extends Component {
     });
     if (password == "admin") { //was unable to implement props to check admin password
       alert("Successful Login");
+      this.setState({unlock: this.state.unlock + 1})
+      console.log(this.state.unlock);
+      //this.props.isAuthenticated({true});
       this.props.history.push("/adminpanel");
     } else {
+     this.setState({unlock: this.state.unlock - 1})
       alert("Unsuccessful Login");
     }
     /*this.props.dispatch(signUp(formData)).then(({isAuthenticated}) => {
