@@ -28,14 +28,12 @@ exports.list = (req, res) => {
 
 // Displays student information - get request
 exports.read = (req, res) => {
-    console.log(req.student);
     res.status(200);
     res.json(req.student);
 };
 
 // Displays student survey information - get request
 exports.getSurveyInfo = (req, res) => {
-    console.log(req.student.survey);
     res.status(200);
     res.json(req.student.survey);
 }
@@ -55,7 +53,6 @@ exports.update = (req, res) => {
         }
         else{
             res.json(student);
-            console.log(student);
         }
     });
 }
@@ -70,7 +67,6 @@ exports.delete = (req, res) => {
             return res.status(400).send(err);
         }
         else{
-            console.log(student);
             res.status(200);
             return res.json(student);
         }
@@ -107,7 +103,6 @@ exports.register = (req, res) => {
                     } 
                     // If match found, returns student id and email with link to survey is sent to given email 
                     else {
-                        console.log(savedStudent.id);
                         const id = savedStudent.id;
                         emailSystem.send(id, studentEmail);
                         return res.json(id);
@@ -131,7 +126,7 @@ exports.login = (req, res) => {
         return res.status(400).json(errors);
     }
     const studentEmail = req.body.email;
-    console.log(studentEmail);
+    
     Student.findOne({email: studentEmail}, (err, student) => {
         if(err){
             return res.status(400).send(err); 
@@ -170,15 +165,10 @@ exports.studentByID = (req, res, next, id) => {
 
 exports.surveysArray = (req, res) => {
     function assign(skillNum, len, activity) {
-        console.log("////////////");
-        console.log(skillNum);
-        console.log("Number of students with " + activity + ": " + len);
         for (let i = 0; i < skillNum[0].length; i++) {
             (skillNum[0][i] /= (len));
             skillNum[0][i] = +skillNum[0][i].toFixed(2).valueOf();
         }
-        console.log("Dividing the totals by: " + len + ":");
-        console.log(skillNum);
         act.push([activity, skillNum]);
     }
 
@@ -196,7 +186,6 @@ exports.surveysArray = (req, res) => {
         }
         //only parse through students who completed activities page and E2020 outcomes
         else if (student.length) {
-            console.log(student.length);
             for (var b = 0, v = student.length; b < v; b++) {
                 var outComes = [student[b].survey.E2, student[b].survey.E3,
                     student[b].survey.E4, student[b].survey.E5, student[b].survey.E6,
@@ -207,16 +196,10 @@ exports.surveysArray = (req, res) => {
                     arrNum.sort(function (a, b) {
                         return a - b
                     });
-                    console.log(arrNum);
                     var dd = arrNum.map(String);
                     var strArr = arrNum.map(function (e) {
                         return e.toString()
                     });
-                    console.log(strArr);
-                    console.log('OUTCOMES LENGTH: ' + outComes.length);
-                    console.log(outComes);
-                    console.log(student[b]._id);
-                    console.log(student[b].survey.activities);
                     for (var i = 0; i < student[b].survey.activities.length; i++) {
                         if (strArr[i] === "1") {
                             len1++;
@@ -396,7 +379,6 @@ exports.surveysArray = (req, res) => {
                                     }
                                     skill12 = [];
                                     skill12.push(arrayE312);
-                                    console.log(arrayE312);
                                 }
                             }
                         } else if (strArr[i] === "13") {
@@ -616,26 +598,16 @@ exports.studentsByDataSet = (req,res) => {
     console.log(data[2]);*/
     Student.find({}, (err, student) => {
         var data = req.body.options;
-        console.log(" options chosen: " + data);
-        console.log(data[0]);
-        console.log(data[1]);
-        console.log(data[2]);
-        console.log(Number(data[2]));
         if (err) {
             res.status(400).send(err);
         }
         //only parse through students who fit data criteria
         else if (student.length) {
-            console.log(student.length);
             var studentsMatch = [];
             for (var b = 0, v = student.length; b < v; b++) {
                 //console.log(student[b].survey.gender.toString() + student[b].survey.raceEthnicity + student[b].survey.major);
                 if ((student[b].survey.gender  === data[0])&& (student[b].survey.raceEthnicity === data[1]) &&  (student[b].survey.major == data[2])){
-                    console.log(student[b].survey.gender);
-                    console.log(student[b].survey.raceEthnicity);
-                    console.log(student[b].survey.major);
                     studentsMatch.push(student[b].id);
-                    console.log(student[b].id);
                 }
                 else {
                     ///

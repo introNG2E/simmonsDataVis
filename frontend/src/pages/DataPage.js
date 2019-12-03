@@ -333,10 +333,6 @@ class DataPage extends Component {
         });
     }
 
-    // Prints the data set that gets passed to Spider Chart.
-    test(e) {
-    }
-
     componentDidMount() {
         this.onComplete('');
         const id = this.props.getId;
@@ -461,36 +457,10 @@ class DataPage extends Component {
                 <Grid>
                     <Grid.Row stretched>
                         <Grid.Column centered stretched>
-                            <Modal open={this.state.modalIsOpen} centered={true}
-                                   trigger={<Grid textAlign='center'><Button size='tiny' basic color="black"
-                                                                             onClick={this.openModal}>
-                                       <Icon name='home'/> Home</Button>
-                                   </Grid>}>
-                                <Modal.Header>
-                                    <Grid>
-                                        <Grid.Row centered>
-                                            Would you like to return to the homepage?
-                                        </Grid.Row>
-                                    </Grid>
-                                </Modal.Header>
-                                <Modal.Content>
-                                    <Modal.Actions>
-                                        <Grid columns={2}>
-                                            <Grid.Row centered>
-                                                <Grid.Column>
-                                                    <Button size='large' color='green' onClick={this.onHomePress}>
-                                                        <Icon name='checkmark' color='black'/> <b
-                                                        className="text">Yes</b>
-                                                    </Button>
-                                                </Grid.Column>
-                                                <Button size='large' color='red' onClick={this.closeModal}>
-                                                    <Icon name='remove' color='black'/> <b className="text">No</b>
-                                                </Button>
-                                            </Grid.Row>
-                                        </Grid>
-                                    </Modal.Actions>
-                                </Modal.Content>
-                            </Modal>
+                        <Grid textAlign='center'><Button size='tiny' basic color="black"
+                                                                            onClick={this.onHomePress}>
+                                    <Icon name='home'/>Home</Button>
+                                </Grid>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -543,7 +513,7 @@ class DataPage extends Component {
                         </Grid.Column>
                         <Grid.Column>
                             <Segment>
-                                <form onSubmit={this.handleSubmit} class="form-major-col">
+                                <Form onSubmit={this.handleSubmit} class="form-major-col">
                                     <label>Major:</label>
                                     <select value={this.state.major} id="major" onChange={this.handleChange.bind(this)}>
                                         <option value="-1">None</option>
@@ -565,20 +535,20 @@ class DataPage extends Component {
                                         <option value="16">Nuclear Engineering</option>
                                         <option value="17">Other</option>
                                     </select>
-                                </form>
+                                </Form>
                             </Segment>
                         </Grid.Column>
                     </Grid>
-                    <Label size="big" floated="left">
+                    <Label style={{margin: '10px'}} size="big" floated="left">
                         <Icon name='users'/>{this.state.numObservations}
                     </Label>
                     <Button.Group floated="right">
-                        <Button color='grey' attached="right" size="small" onClick={this.addDataSet.bind(this)}>Add
-                            Dataset</Button>
-                        <Button color="grey" attached="right" size="small" onClick={this.removeDataSet.bind(this)}>Remove
-                            Dataset</Button>
-                        <Button color="grey" attached="right" size="small" onClick={this.test.bind(this)}>Print
-                            DataSets</Button>
+                        <Button style={{margin: '10px'}} color='grey' attached="right" size="small" onClick={this.addDataSet.bind(this)}>
+                            Add Dataset
+                        </Button>
+                        <Button style={{margin: '10px'}} color="grey" attached="right" size="small" onClick={this.removeDataSet.bind(this)}>
+                            Remove Dataset
+                        </Button>
                     </Button.Group>
                 </fieldset>
                 <SpiderChart

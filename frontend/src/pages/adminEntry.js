@@ -1,10 +1,8 @@
 import React, { Component, useState } from "react";
 import {
-  Button,
+  Divider,
   Form,
   Grid,
-  Header,
-  Message,
   Segment
 } from "semantic-ui-react";
 import "../styles/adminEntry.css";
@@ -62,6 +60,9 @@ class adminEntry extends Component {
         <br></br>
         <Grid centered columns={2}>
           <Grid.Column centered>
+          <Divider hidden/>
+          <Divider hidden/>
+          <Divider hidden/>
             <Segment>
               <Form onSubmit={this.handleSubmit}>
                 <div className="input">
