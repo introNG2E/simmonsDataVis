@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import {Redirect} from 'react-router-dom';
-import {Grid, Image, Header, Container, Button, Divider, Segment, GridColumn} from 'semantic-ui-react'
+import React from 'react';
+import {Grid, Header, Button, Divider, Segment} from 'semantic-ui-react'
 import '../styles/Homepage.css'
 
 function Homepage(props) {

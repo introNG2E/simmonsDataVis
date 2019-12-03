@@ -3,7 +3,7 @@ import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css';
 import '../styles/SpiderChart.css';
 
-class SpiderChart extends React.Component {
+class SpiderChart extends Component {
 
     
 

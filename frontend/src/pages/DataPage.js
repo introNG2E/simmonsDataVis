@@ -8,14 +8,10 @@ import {
     Segment,
     Label,
     Icon,
-    Menu,
-    Sticky,
     Modal,
     Dropdown
 } from 'semantic-ui-react'
-import {redirect} from 'react-router-dom'
 import SpiderChart from '../components/SpiderChart'
-import data from '../data/data.js'
 import '../styles/DataPage.css'
 import axios from 'axios';
 import {ResponsiveBar} from "@nivo/bar";
@@ -58,30 +54,21 @@ class DataPage extends Component {
             hasClicked: false,
             modalIsOpen: false
         };
+        this.onHomePress = this.onHomePress.bind(this);
     }
 
-    openModal = () => {
-        this.setState({modalIsOpen: true});
-    }
-
-    closeModal = () => {
-        this.setState({modalIsOpen: false});
-    }
-
-    onHomePress() {
-        this.history.push('/Homepage');
+    onHomePress = () => {
+        this.props.history.push('/homepage/' + this.props.getId);
     }
 
 
     avgIngenuity = () => {
-        console.log('changed');
         this.setState({vis: 1})
         this.setState({outOption: 1});
         var ingenuity = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             ingenuity.push({activity: this.state.x[i][0], value: this.state.x[i][1][0]});
         }
-        console.log(ingenuity);
         ingenuity.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -89,11 +76,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(ingenuity);
-        console.log(JSON.stringify(ingenuity));
-        console.log(ingenuity);
         this.setState({disp: ingenuity});
-        console.log(this.disp);
         this.setState({xAxis: "Average Ingenuity Score"});
         this.setState({title: "Recommended Activities to Improve Ingenuity"});
         /*this.setState({optDisp: "Ingenuity"});*/
@@ -103,13 +86,11 @@ class DataPage extends Component {
 
     };
     avgCreativity = () => {
-        console.log('changed');
         this.setState({outOption: 2});
         var creativity = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             creativity.push({activity: this.state.x[i][0], value: this.state.x[i][1][1]});
         }
-        console.log(creativity);
         //creativity.sort((a, b) => (a.value > b.value) ? 1 : -1);
         creativity.sort(
             function (a, b) {
@@ -119,12 +100,8 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(creativity);
-        console.log(JSON.stringify(creativity));
-        console.log(creativity);
         //setDisp(creativity);
         this.setState({disp: creativity});
-        console.log(this.disp);
         this.setState({xAxis: "Average Creativity Score"});
         this.setState({title: "Recommended Activities to Improve Creativity"});
         this.setState({textB: "Creativity"});
@@ -133,13 +110,11 @@ class DataPage extends Component {
     };
 
     avgCommunication = () => {
-        console.log('changed');
         this.setState({outOption: 3});
         var communication = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             communication.push({activity: this.state.x[i][0], value: this.state.x[i][1][2]});
         }
-        console.log(communication);
         communication.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -147,11 +122,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(communication);
-        console.log(JSON.stringify(communication));
-        console.log(communication);
         this.setState({disp: communication});
-        console.log(this.disp);
         this.setState({xAxis: "Average Communication Score"});
         this.setState({title: "Recommended Activities to Improve Communication"});
         this.setState({textB: "Communication"});
@@ -160,13 +131,11 @@ class DataPage extends Component {
 
     };
     avgBusiness = () => {
-        console.log('changed');
         this.setState({outOption: 4});
         var business = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             business.push({activity: this.state.x[i][0], value: this.state.x[i][1][3]});
         }
-        console.log(business);
         business.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -174,11 +143,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(business);
-        console.log(JSON.stringify(business));
-        console.log(business);
         this.setState({disp: business});
-        console.log(this.disp);
 
         this.setState({xAxis: "Average Business & Management Score"})
         this.setState({title: "Recommended Activities to Improve Business & Managment"});
@@ -189,13 +154,11 @@ class DataPage extends Component {
 
     };
     avgLeadership = () => {
-        console.log('changed');
         this.setState({outOption: 5});
         var leadership = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             leadership.push({activity: this.state.x[i][0], value: this.state.x[i][1][4]});
         }
-        console.log(leadership);
         leadership.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -203,11 +166,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(leadership);
-        console.log(JSON.stringify(leadership));
-        console.log(leadership);
         this.setState({disp: leadership});
-        console.log(this.disp);
 
         this.setState({xAxis: "Average Leadership Score"})
 
@@ -218,13 +177,11 @@ class DataPage extends Component {
 
     };
     avgEthical = () => {
-        console.log('changed');
         this.setState({outOption: 6});
         var ethical = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             ethical.push({activity: this.state.x[i][0], value: this.state.x[i][1][5]});
         }
-        console.log(ethical);
         ethical.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -232,11 +189,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(ethical);
-        console.log(JSON.stringify([ethical]));
-        console.log(ethical);
         this.setState({disp: ethical});
-        console.log(this.disp);
 
         this.setState({xAxis: "Average High Ethical Standards Score"});
         this.setState({title: "Recommended Activities to Improve Ethical Standards"});
@@ -246,13 +199,11 @@ class DataPage extends Component {
 
     };
     avgProfessionalism = () => {
-        console.log('changed');
         this.setState({outOption: 7});
         var professionalism = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             professionalism.push({activity: this.state.x[i][0], value: this.state.x[i][1][6]});
         }
-        console.log(professionalism);
         professionalism.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -260,11 +211,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(professionalism);
-        console.log(JSON.stringify(professionalism));
-        console.log(professionalism);
         this.setState({disp: professionalism});
-        console.log(this.disp);
 
         this.setState({xAxis: "Average Professionalism Score"})
         this.setState({title: "Recommended Activities to Improve Professionalism"});
@@ -274,13 +221,11 @@ class DataPage extends Component {
 
     };
     avgDynamism = () => {
-        console.log('changed');
         this.setState({outOption: 8});
         var dynamism = [];
         for (var i = 0, j = this.state.x.length; i < j; i++) {
             dynamism.push({activity: this.state.x[i][0], value: this.state.x[i][1][7]});
         }
-        console.log(dynamism);
         dynamism.sort(
             function (a, b) {
                 if (a.value === b.value) {
@@ -288,11 +233,7 @@ class DataPage extends Component {
                 }
                 return a.value > b.value ? 1 : -1;
             });
-        console.log(dynamism);
-        console.log(JSON.stringify(dynamism));
-        console.log(dynamism);
         this.setState({disp: dynamism});
-        console.log(this.disp);
         this.setState({xAxis: "Average Dynamism, Agility, Resilience, and Flexibility"});
         this.setState({title: "Recommended Activities to Improve Dynamism, Agility, Resilience, and Flexibility Score"});
 
@@ -311,23 +252,21 @@ class DataPage extends Component {
             '/api/students/'
         ).then(res => {
             filteredData = res.data;
-            console.log(filteredData);
-            if (this.state.gender != -1) {
+            if (this.state.gender !== '-1') {
                 filteredData = filteredData.filter(entry => {
-                    return (entry.survey.gender == this.state.gender);
+                    return (entry.survey.gender === this.state.gender);
                 })
             }
-            if (this.state.raceEthnicity != -1) {
+            if (this.state.raceEthnicity !== '-1') {
                 filteredData = filteredData.filter(entry => {
-                    return (entry.survey.raceEthnicity == this.state.raceEthnicity);
+                    return (entry.survey.raceEthnicity === this.state.raceEthnicity);
                 })
             }
-            if (this.state.major != -1) {
+            if (this.state.major !== '-1') {
                 filteredData = filteredData.filter(entry => {
-                    return (entry.survey.major == this.state.major);
+                    return (entry.survey.major === this.state.major);
                 })
             }
-            console.log(filteredData);
             var sumE2 = 0;
             var sumE3 = 0;
             var sumE4 = 0;
@@ -351,7 +290,6 @@ class DataPage extends Component {
                 sumE8 += filteredData[entry].survey.E8;
                 sumE9 += filteredData[entry].survey.E9;
             }
-            var colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
             newDataSet = [{
                 data: {
@@ -369,18 +307,13 @@ class DataPage extends Component {
                 },
                 meta: {color: "red"}
             }]
-            console.log("addDataSet called: ");
-            console.log('Gender: ' + this.state.gender);
-            console.log('Race: ' + this.state.raceEthnicity);
-            console.log('Major: ' + this.state.major);
-            if (size == 0) {
+            if (size === 0) {
                 return false;
             }
             this.setState({
                 dataSets: this.state.dataSets.concat(newDataSet)
             })
         }).catch(err => {
-            console.log(err);
             return false;
         })
     }
@@ -390,33 +323,28 @@ class DataPage extends Component {
         this.setState({
             [e.target.id]: e.target.value
         })
-        //console.log('Selected ' + e.target.id + ': ' + this.state.gender);
     }
 
     // Pops the last element of the array. 
     removeDataSet(e) {
         var index = this.state.dataSets.length - 1;
         this.setState({
-            dataSets: this.state.dataSets.filter((_, i) => i != index)
+            dataSets: this.state.dataSets.filter((_, i) => i !== index)
         });
-        console.log("removeDataSet called: ");
     }
 
     // Prints the data set that gets passed to Spider Chart.
     test(e) {
-        console.log(this.state.dataSets);
     }
 
     componentDidMount() {
         this.onComplete('');
         const id = this.props.getId;
         var newDataSet = [];
-        console.log(id)
         axios.get(
             '/api/students/' + id,
         )
             .then(res => {
-                console.log(res);
                 newDataSet = [{
                     data: {
                         gender: res.data.survey.gender,
@@ -438,18 +366,13 @@ class DataPage extends Component {
                 })
             })
             .catch(err => {
-                console.log(err);
             })
     }
 
     onComplete(e) {
         //var options = [this.state.gender, this.state.race, this.state.major];
-        var options = [2, 3, 16];
         //control for if gender,race,or major are not chosen here?
-        let json = JSON.stringify(options);
-        let post_data = {json_data: json};
         /* axios.post('/url',post_data).then().catch().finally();*/
-        // console.log("Complete! "+ JSON.stringify(result.data));
 
         /* const query = axios.post('http://localhost:8080/api/students/data/set',{arr: options}).then(res => {
               //
@@ -463,29 +386,14 @@ class DataPage extends Component {
 
         ///pass data to the backend, then parse, should be able to return data on a data request
         //if NOT, due the post, then pass array into get (students who match demo)
-        const response = axios.get(
+        axios.get(
             'http://localhost:8080/api/students/data'
         )
             .then(res => {
-                console.log(res.data.length);
-                console.log(res.data[0].length);
-                console.log(res.data[0]);
-                console.log(res.data[1]);
-                console.log(res.data[1][1]);
-                console.log(res.data[1][0]); //name of 2nd activity
-                console.log(res.data[1][1][0]);
-                console.log(res.data[0][1][0]); //the E2020 array for the 1st activity for 1st activity from backend
-                console.log(res.data[0][1][0][0]); //1st element of the E2020 array for the 1st activity passed from backend
-                console.log(res.data[0][1][0].toString());
                 var d = [];
                 var act = [];
                 var out = [];
-                console.log(res.data.length);
                 for (var i = 0, n = res.data.length; i < n; i++) {
-                    console.log(res.data[i]);
-                    console.log(res.data[i][1]);
-                    console.log(res.data[i][1][0]);
-                    console.log(res.data[i][1][0][0]);
                     //d.push([res.data[i][0],res.data[i][1][0]]); // the array storing the data passed from the backend
                     d.push([res.data[i][0], res.data[i][1][0]]);
                     this.state.x.push([res.data[i][0], res.data[i][1][0]]);
@@ -494,22 +402,14 @@ class DataPage extends Component {
 
                         out.push(res.data[i][1][0])
                     }
-
-
-                    console.log(d);
-                    console.log(this.x);
-                    console.log(act);
-                    //console.log(out);
                 }
                 this.setState({x: d});
                 this.setState({act: act});
                 //setAct(act);
-                console.log(this.state.x);
                 return this.state.x;
 
             })
             .catch(err => {
-                console.log(err);
             }).finally(a => {
                     this.avgIngenuity(); //ensures ingenuity (default) is displayed on first render, since spider chart isn't clickable
                 }
@@ -519,12 +419,6 @@ class DataPage extends Component {
 
 
     render() {
-        const genders = ['Woman', 'Man', 'Trans', 'Other', 'I don\'t want to respond'];
-        const race = ['Asian', 'Black', 'Hispanic', 'Pacific', 'White', 'Other', 'Mix'];
-        const major = ['General Engineering', 'Civil Engineering', 'Construction', 'Agricultural Engineering', 'Applied Engineering',
-            'Biomedical Engineering', 'Chemical Engineering', 'Electrical Engineering', 'Engineering Management', 'Engineering Physics',
-            'Engineering Science', 'Industrial Engineering', 'Materials Engineering', 'Mechanical Engineering', 'Nanoengineering',
-            'Nuclear Engineering', 'Other'];
         const options = [
             {key: 1, text: 'Ingenuity', value: 1, onClick: (this.avgIngenuity), selected: this.state.vis === 1},
             {key: 2, text: 'Creativity', value: 2, onClick: this.avgCreativity, selected: this.state.vis === 2},
@@ -575,8 +469,7 @@ class DataPage extends Component {
                                 <Modal.Header>
                                     <Grid>
                                         <Grid.Row centered>
-                                            If you return to the homepage, you will be signed out. Do you wish to
-                                            proceed?
+                                            Would you like to return to the homepage?
                                         </Grid.Row>
                                     </Grid>
                                 </Modal.Header>
@@ -620,8 +513,7 @@ class DataPage extends Component {
                             <Segment>
                                 <Form onSubmit={this.handleSubmit} class="form-gender-col">
                                     <label>Gender:</label>
-                                    <select value={this.state.value} id="gender" onChange={this.handleChange.bind(this)}
-                                            value={this.state.gender}>
+                                    <select value={this.state.gender} id="gender" onChange={this.handleChange.bind(this)}>
                                         <option value="-1">None</option>
                                         <option value="1">Woman</option>
                                         <option value="2">Man</option>
@@ -636,8 +528,7 @@ class DataPage extends Component {
                             <Segment>
                                 <Form onSubmit={this.handleSubmit} class="form-race-col">
                                     <label>Race/Ethnicty:</label>
-                                    <select value={this.state.raceEthnicity} id="raceEthnicity"
-                                            onChange={this.handleChange.bind(this)} value={this.state.raceEthnicity}>
+                                    <select value={this.state.raceEthnicity} id="raceEthnicity" onChange={this.handleChange.bind(this)}>
                                         <option value="-1">None</option>
                                         <option value="1">Asian</option>
                                         <option value="2">Black or African American</option>
@@ -654,8 +545,7 @@ class DataPage extends Component {
                             <Segment>
                                 <form onSubmit={this.handleSubmit} class="form-major-col">
                                     <label>Major:</label>
-                                    <select value={this.state.major} id="major" onChange={this.handleChange.bind(this)}
-                                            value={this.state.major}>
+                                    <select value={this.state.major} id="major" onChange={this.handleChange.bind(this)}>
                                         <option value="-1">None</option>
                                         <option value="1">General Engineering</option>
                                         <option value="2">Civil Engineering</option>
@@ -694,21 +584,17 @@ class DataPage extends Component {
                 <SpiderChart
                     dataSets={this.state.dataSets}
                 />
-                <Menu inverted>
-                    <Menu.Menu position='right' color='white'>
-                        <Button.Group color='red'>
-                            <Dropdown
-                                button
-                                simple
-                                fluid
-                                open={this.state.hasClicked}
-                                closeOnChange={true}
-                                options={options}
-                                trigger={trigger}
-                            />
-                        </Button.Group>
-                    </Menu.Menu>
-                </Menu>
+                <Button.Group fluid color='grey' styles = {{margin: '4px'}}>
+                    <Dropdown
+                        button
+                        simple
+                        fluid
+                        open={this.state.hasClicked}
+                        closeOnChange={true}
+                        options={options}
+                        trigger={trigger}
+                    />
+                </Button.Group>
                 <Header as='h3' dividing textAlign="center">
                     {this.state.title}
                 </Header>

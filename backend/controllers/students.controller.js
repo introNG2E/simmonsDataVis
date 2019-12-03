@@ -201,7 +201,7 @@ exports.surveysArray = (req, res) => {
                 var outComes = [student[b].survey.E2, student[b].survey.E3,
                     student[b].survey.E4, student[b].survey.E5, student[b].survey.E6,
                     student[b].survey.E7, student[b].survey.E8, student[b].survey.E9];
-                if (Array.isArray(student[b].survey.activities)&& student[b].survey.activities.length > 1 && student[b].survey.activities && outComes.length === 8) {
+                if (Array.isArray(student[b].survey.activities)&& student[b].survey.activities.length >= 1 && student[b].survey.activities && outComes.length === 8) {
                     var arrNum = student[b].survey.activities.map(Number);
                     //caused errors if the order of activities was incorrect on survey
                     arrNum.sort(function (a, b) {

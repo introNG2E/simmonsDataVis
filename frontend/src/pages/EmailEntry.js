@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 import {Button, Header, Form, Grid, Divider, Segment, Label, Transition, List, Loader, Dimmer} from 'semantic-ui-react';
 
@@ -21,25 +21,6 @@ function EmailEntry(props) {
     const [copyL,setCopyL] = useState(''); //used to make copy of login error message
     const [regLoad, setRegLoad] = useState (false);
     const [loginLoad, setLoginLoad] =useState(false);
-
-    //Used for manual error-checking/testing in console
-    useEffect(() => {
-        console.log("Register error is visible? " + isVisibleRegErr + "\nError message: " + "'" + errors + "'");
-        if (isVisibleRegErr === true) {
-            console.log('Currently: Register errors are visible.');
-        } else if (isVisibleRegErr === false) {
-            console.log("Currently: Register Errors are NOT visible.");
-        }
-    }, [isVisibleRegErr]);
-
-    useEffect(() => {
-        console.log("Login error is visible? " + isVisibleLoginErr + "\nError message: " + "'" + errorsL + "'");
-        if (isVisibleLoginErr === true) {
-            console.log('Currently: Login errors are visible.');
-        } else if (isVisibleLoginErr === false) {
-            console.log("Currently: Login errors are NOT visible.");
-        }
-    }, [isVisibleLoginErr]);
 
     function stringErr(string) {
         return string.slice(0, string.length);
@@ -101,22 +82,18 @@ function EmailEntry(props) {
         if (errorsL != null) {//closes the popup for login
             setErrorsL('');
         }
-        const response = await axios.post(
+        await axios.post(
             '/api/students/register',
             {email: registerInput},
             {headers: {'Content-Type': 'application/json'}}
         )
             .then(function (response) {
-                console.log(response);
                 // props.userLogged(response.data);
                 setRedirecting(true);
             })
             .catch(function (error) {
-                console.log(error);
                 if (error.response.data.emailFound) {
-                    console.log(error.response.data.emailFound);
                     setErrors(error.response.data.emailFound);
-                    console.log(errors);
                 } else {
                     setErrors(error.response.data.email);
                 }
@@ -133,7 +110,7 @@ function EmailEntry(props) {
         if (registerInput != null) {//removes any text from the register input form
             setregisterInput('');
         }
-        const response = await axios.post(
+        await axios.post(
             '/api/students/login',
             {email: loginInput},
             {headers: {'Content-Type': 'application/json'}}
