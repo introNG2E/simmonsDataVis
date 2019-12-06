@@ -1,0 +1,1405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with id passed to it 1`] = `
+<div
+  class="box"
+>
+  <fieldset>
+    <legend>
+      E2020 Attributes by Groups
+    </legend>
+    <div
+      className="ui three column grid"
+    >
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-gender-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Gender:
+            </label>
+            <select
+              id="gender"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                Woman
+              </option>
+              <option
+                value="2"
+              >
+                Man
+              </option>
+              <option
+                value="3"
+              >
+                Trans
+              </option>
+              <option
+                value="4"
+              >
+                Other
+              </option>
+              <option
+                value="5"
+              >
+                I don't want to respond
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-race-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Race/Ethnicty:
+            </label>
+            <select
+              id="raceEthnicity"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                Asian
+              </option>
+              <option
+                value="2"
+              >
+                Black or African American
+              </option>
+              <option
+                value="3"
+              >
+                Hispanic, Latino, or Spanish Origin
+              </option>
+              <option
+                value="4"
+              >
+                Native Hawaiian or Other Pacific Islander
+              </option>
+              <option
+                value="5"
+              >
+                White
+              </option>
+              <option
+                value="6"
+              >
+                Other
+              </option>
+              <option
+                value="7"
+              >
+                Mix
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-major-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Major:
+            </label>
+            <select
+              id="major"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                General Engineering
+              </option>
+              <option
+                value="2"
+              >
+                Civil Engineering
+              </option>
+              <option
+                value="3"
+              >
+                Construction
+              </option>
+              <option
+                value="4"
+              >
+                Agricultural Engineering
+              </option>
+              <option
+                value="5"
+              >
+                Applied Engineering
+              </option>
+              <option
+                value="6"
+              >
+                Biomedical Engineering
+              </option>
+              <option
+                value="7"
+              >
+                Chemical Engineering
+              </option>
+              <option
+                value="8"
+              >
+                Electrical Engineering
+              </option>
+              <option
+                value="9"
+              >
+                Engineering Management
+              </option>
+              <option
+                value="10"
+              >
+                Engineering Physics
+              </option>
+              <option
+                value="11"
+              >
+                Engineering Science
+              </option>
+              <option
+                value="12"
+              >
+                Industrial Engineering
+              </option>
+              <option
+                value="13"
+              >
+                Materials Engineering
+              </option>
+              <option
+                value="14"
+              >
+                Mechanical Engineering
+              </option>
+              <option
+                value="15"
+              >
+                Nanoengineering
+              </option>
+              <option
+                value="16"
+              >
+                Nuclear Engineering
+              </option>
+              <option
+                value="17"
+              >
+                Other
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ui big label"
+      floated="left"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "10px",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="users icon"
+        onClick={[Function]}
+      />
+      0
+    </div>
+    <div
+      className="ui right floated buttons"
+    >
+      <div
+        className="ui grey small right attached button"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+        tabIndex={0}
+      >
+        Add Dataset
+      </div>
+      <div
+        className="ui grey small right attached button"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+        tabIndex={0}
+      >
+        Remove Dataset
+      </div>
+    </div>
+  </fieldset>
+  <div
+    className="center"
+  >
+    <svg
+      height={500}
+      version="1"
+      viewBox="-35 0 570 500"
+      width={500}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(250.0000,250.0000)"
+      >
+        <g>
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={208.33333333333334}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={156.25}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={104.16666666666667}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={52.083333333333336}
+          />
+        </g>
+        <g>
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 0.0000,-208.3333"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 147.3139,-147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 208.3333,0.0000"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 147.3139,147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 0.0000,208.3333"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -147.3139,147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -208.3333,0.0000"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -147.3139,-147.3139"
+          />
+        </g>
+        <g />
+        <g>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="0.0000"
+            y="-237.5000"
+          >
+            Practical Ingenuity
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="167.9379"
+            y="-167.9379"
+          >
+            Creativity
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="237.5000"
+            y="0.0000"
+          >
+            Communication
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="167.9379"
+            y="167.9379"
+          >
+            Business & Management
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="0.0000"
+            y="237.5000"
+          >
+            Leadership
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-167.9379"
+            y="167.9379"
+          >
+            High Ethical Standards
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-237.5000"
+            y="0.0000"
+          >
+            Professionalism
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-167.9379"
+            y="-167.9379"
+          >
+            Dynamism, Agility, Resilience, and Flexibility
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div
+    className="ui grey fluid buttons"
+    styles={
+      Object {
+        "margin": "4px",
+      }
+    }
+  >
+    <div
+      aria-expanded={false}
+      className="ui button fluid simple dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <span>
+        Select a Category to Display
+      </span>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={false}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Ingenuity
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Creativity
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Communication
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Business & Management 
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Leadership
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            High Ethical Standards
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Professionalism
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Dynamism, Agility, Resilience, and Flexibility
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3
+    className="ui dividing center aligned header"
+  >
+    
+  </h3>
+  <div
+    style={
+      Object {
+        "height": 450,
+        "width": 1080,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="homeSection"
+  >
+    <div
+      className="ui divider"
+    />
+    <div
+      className="ui grid"
+    >
+      <div
+        className="stretched row"
+      >
+        <div
+          centered={true}
+          className="stretched column"
+        >
+          <div
+            className="ui center aligned grid"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <button
+              className="ui black tiny basic button"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="home icon"
+                onClick={[Function]}
+              />
+               Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly without id passed to it 1`] = `
+<div
+  class="box"
+>
+  <fieldset>
+    <legend>
+      E2020 Attributes by Groups
+    </legend>
+    <div
+      className="ui three column grid"
+    >
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-gender-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Gender:
+            </label>
+            <select
+              id="gender"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                Woman
+              </option>
+              <option
+                value="2"
+              >
+                Man
+              </option>
+              <option
+                value="3"
+              >
+                Trans
+              </option>
+              <option
+                value="4"
+              >
+                Other
+              </option>
+              <option
+                value="5"
+              >
+                I don't want to respond
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-race-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Race/Ethnicty:
+            </label>
+            <select
+              id="raceEthnicity"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                Asian
+              </option>
+              <option
+                value="2"
+              >
+                Black or African American
+              </option>
+              <option
+                value="3"
+              >
+                Hispanic, Latino, or Spanish Origin
+              </option>
+              <option
+                value="4"
+              >
+                Native Hawaiian or Other Pacific Islander
+              </option>
+              <option
+                value="5"
+              >
+                White
+              </option>
+              <option
+                value="6"
+              >
+                Other
+              </option>
+              <option
+                value="7"
+              >
+                Mix
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div
+        className="column"
+      >
+        <div
+          className="ui segment"
+        >
+          <form
+            class="form-major-col"
+            className="ui form"
+            onSubmit={[Function]}
+          >
+            <label>
+              Major:
+            </label>
+            <select
+              id="major"
+              onChange={[Function]}
+              value="-1"
+            >
+              <option
+                value="-1"
+              >
+                None
+              </option>
+              <option
+                value="1"
+              >
+                General Engineering
+              </option>
+              <option
+                value="2"
+              >
+                Civil Engineering
+              </option>
+              <option
+                value="3"
+              >
+                Construction
+              </option>
+              <option
+                value="4"
+              >
+                Agricultural Engineering
+              </option>
+              <option
+                value="5"
+              >
+                Applied Engineering
+              </option>
+              <option
+                value="6"
+              >
+                Biomedical Engineering
+              </option>
+              <option
+                value="7"
+              >
+                Chemical Engineering
+              </option>
+              <option
+                value="8"
+              >
+                Electrical Engineering
+              </option>
+              <option
+                value="9"
+              >
+                Engineering Management
+              </option>
+              <option
+                value="10"
+              >
+                Engineering Physics
+              </option>
+              <option
+                value="11"
+              >
+                Engineering Science
+              </option>
+              <option
+                value="12"
+              >
+                Industrial Engineering
+              </option>
+              <option
+                value="13"
+              >
+                Materials Engineering
+              </option>
+              <option
+                value="14"
+              >
+                Mechanical Engineering
+              </option>
+              <option
+                value="15"
+              >
+                Nanoengineering
+              </option>
+              <option
+                value="16"
+              >
+                Nuclear Engineering
+              </option>
+              <option
+                value="17"
+              >
+                Other
+              </option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ui big label"
+      floated="left"
+      onClick={[Function]}
+      style={
+        Object {
+          "margin": "10px",
+        }
+      }
+    >
+      <i
+        aria-hidden="true"
+        className="users icon"
+        onClick={[Function]}
+      />
+      0
+    </div>
+    <div
+      className="ui right floated buttons"
+    >
+      <div
+        className="ui grey small right attached button"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+        tabIndex={0}
+      >
+        Add Dataset
+      </div>
+      <div
+        className="ui grey small right attached button"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "margin": "10px",
+          }
+        }
+        tabIndex={0}
+      >
+        Remove Dataset
+      </div>
+    </div>
+  </fieldset>
+  <div
+    className="center"
+  >
+    <svg
+      height={500}
+      version="1"
+      viewBox="-35 0 570 500"
+      width={500}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        transform="translate(250.0000,250.0000)"
+      >
+        <g>
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={208.33333333333334}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={156.25}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={104.16666666666667}
+          />
+          <circle
+            className="scale"
+            cx={0}
+            cy={0}
+            fill="none"
+            r={52.083333333333336}
+          />
+        </g>
+        <g>
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 0.0000,-208.3333"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 147.3139,-147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 208.3333,0.0000"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 147.3139,147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 0.0000,208.3333"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -147.3139,147.3139"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -208.3333,0.0000"
+          />
+          <polyline
+            className="axis"
+            points="0.0000,0.0000 -147.3139,-147.3139"
+          />
+        </g>
+        <g />
+        <g>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="0.0000"
+            y="-237.5000"
+          >
+            Practical Ingenuity
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="167.9379"
+            y="-167.9379"
+          >
+            Creativity
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="237.5000"
+            y="0.0000"
+          >
+            Communication
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="167.9379"
+            y="167.9379"
+          >
+            Business & Management
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="0.0000"
+            y="237.5000"
+          >
+            Leadership
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-167.9379"
+            y="167.9379"
+          >
+            High Ethical Standards
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-237.5000"
+            y="0.0000"
+          >
+            Professionalism
+          </text>
+          <text
+            className="caption"
+            dy={6}
+            fontFamily="sans-serif"
+            fontSize={12}
+            textAnchor="middle"
+            x="-167.9379"
+            y="-167.9379"
+          >
+            Dynamism, Agility, Resilience, and Flexibility
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div
+    className="ui grey fluid buttons"
+    styles={
+      Object {
+        "margin": "4px",
+      }
+    }
+  >
+    <div
+      aria-expanded={false}
+      className="ui button fluid simple dropdown"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="listbox"
+      tabIndex={0}
+    >
+      <span>
+        Select a Category to Display
+      </span>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        className="menu transition"
+      >
+        <div
+          aria-checked={false}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Ingenuity
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Creativity
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Communication
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Business & Management 
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Leadership
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            High Ethical Standards
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Professionalism
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            Dynamism, Agility, Resilience, and Flexibility
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3
+    className="ui dividing center aligned header"
+  >
+    
+  </h3>
+  <div
+    style={
+      Object {
+        "height": 450,
+        "width": 1080,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="homeSection"
+  >
+    <div
+      className="ui divider"
+    />
+    <div
+      className="ui grid"
+    >
+      <div
+        className="stretched row"
+      >
+        <div
+          centered={true}
+          className="stretched column"
+        >
+          <div
+            className="ui center aligned grid"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <button
+              className="ui black tiny basic button"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="home icon"
+                onClick={[Function]}
+              />
+               Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
