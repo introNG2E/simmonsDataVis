@@ -3,13 +3,12 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
     path = require('path'),
-    config = require('./config'), 
     passport = require('passport'),
     studentsRouter = require('../routes/students.routes');
 
 module.exports.init = function() {
     mongoose.set('useCreateIndex', true);
-    mongoose.connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    mongoose.connect(process.env.MONGODB_URI || require('./config').db.uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
     //Initialize app
     const app = express();
@@ -23,7 +22,7 @@ module.exports.init = function() {
       next();
     });
 
-    var cors = require('cors');
+    const cors = require('cors');
     app.use(cors());
 
     //Enable request logging for development debugging

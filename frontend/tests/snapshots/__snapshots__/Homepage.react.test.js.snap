@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with id passed to it 1`] = `
+<div
+  className="homePage"
+>
+  <div
+    className="ui divider"
+  />
+  <h1
+    className="ui center aligned header"
+  >
+    Engineering Out-Of-Class Activity Decision Support System
+  </h1>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui grey inverted very padded segment"
+  >
+    <p>
+      The OOCA Decision Support System aims at guiding students (i.e. especially undergraduate engineering) on making decisions on professional development plan and support educators, program managers and policy makers on developing strategic plan for engineering programs. This system is developed as part of the NSF project: CAREER:Investigating Co-Curricular Participation of Students Underrepresented in Engineering. The full project description can be found on:  
+      <a
+        href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1351156&HistoricalAwards=false"
+      >
+        here
+      </a>
+      .
+    </p>
+    <p>
+      This system uses public data and survives by your contributions. Please take your time to complete data the survey. By doing so, you are helping to improve the system. Please note that you need to be at least 18 years old to take this survey.
+    </p>
+  </div>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui two column grid"
+  >
+    <div
+      className="column"
+    >
+      <button
+        className="ui massive button router"
+        onClick={[Function]}
+      >
+          Data  
+      </button>
+    </div>
+    <div
+      className="column"
+    >
+      <button
+        className="ui massive button router"
+        onClick={[Function]}
+      >
+        Survey
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly without id passed to it 1`] = `
+<div
+  className="homePage"
+>
+  <div
+    className="ui divider"
+  />
+  <h1
+    className="ui center aligned header"
+  >
+    Engineering Out-Of-Class Activity Decision Support System
+  </h1>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui grey inverted very padded segment"
+  >
+    <p>
+      The OOCA Decision Support System aims at guiding students (i.e. especially undergraduate engineering) on making decisions on professional development plan and support educators, program managers and policy makers on developing strategic plan for engineering programs. This system is developed as part of the NSF project: CAREER:Investigating Co-Curricular Participation of Students Underrepresented in Engineering. The full project description can be found on:  
+      <a
+        href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1351156&HistoricalAwards=false"
+      >
+        here
+      </a>
+      .
+    </p>
+    <p>
+      This system uses public data and survives by your contributions. Please take your time to complete data the survey. By doing so, you are helping to improve the system. Please note that you need to be at least 18 years old to take this survey.
+    </p>
+  </div>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui two column grid"
+  >
+    <div
+      className="column"
+    >
+      <button
+        className="ui massive button router"
+        onClick={[Function]}
+      >
+          Data  
+      </button>
+    </div>
+    <div
+      className="column"
+    >
+      <button
+        className="ui massive button router"
+        onClick={[Function]}
+      >
+        Survey
+      </button>
+    </div>
+  </div>
+</div>
+`;

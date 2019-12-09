@@ -1,8 +1,8 @@
 const nodemailer = require('nodemailer');
-const creds = require('../config/config.js');
+// const creds = require('../config/config.js');
 
 function body(userId){
-  const link = 'localhost:3000/homepage/' + userId ;
+  const link = 'localhost:3000/homepage/' /*'https://simmons-data-vis.herokuapp.com/homepage/'*/+ userId ;
 
   return "Hi, to conduct your survey please follow this link: " + link;
 }
@@ -11,8 +11,8 @@ function establishTransport() {
   var transport = {
     host: 'smtp.gmail.com',
     auth: {
-      user: creds.email.username,
-      pass: creds.email.password
+      user: process.env.CREDS_EMAIL_USERNAME || require('../config/config.js').email.username,
+      pass: process.env.CREDS_EMAIL_PASSWORD || require('../config/config.js').email.password
     }
   }
 

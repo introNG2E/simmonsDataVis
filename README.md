@@ -1,19 +1,50 @@
-# simmonsDataVis
+# Simmons Data Visualization
 
-## How to start
+This web application is a survey taking and data visualization website where students complete a survey and can view 
 
-cd into 'frontend' and run 'yarn start'
+## Link
+https://simmons-data-vis.herokuapp.com/
 
-For backend, cd into 'backend' and run 'node server.js' or 'npx nodemon server.js'  
+## Credit
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Using Postman to Test Backend API
-  
-Using postman, http://localhost:8080/api/students/<Insert_email_here> is used for get requests to get the information of a specific student by their email. You can ommit the <Insert_email_here> to receive information on all of the students currently in the database.    
-  
-Register and login uses a post request with http://localhost:8080/api/students/register/ and http://localhost:8080/api/students/login respectively. To register/login an email, select Body > raw and change the Text option to JSON then insert the email like so 
+## Features Implemented
+Register/Login Page
+![alt test](frontend/src/img/login_register.png)
+
+Homepage
+![alt test](frontend/src/img/homepage.png)
+
+Survey Page
+![alt test](frontend/src/img/survey_1_1.png)
+![alt test](frontend/src/img/survey_1_2.png)
+
+Data Page
+![alt test](frontend/src/img/data_1.png)
+![alt test](frontend/src/img/data_2.png)
+
+Admin Page
+
+## Run Project
+Go into the develop branch and create two terminals. On one terminal,
 ```
-{
-    "email" : "test@test.com"
-} 
+    cd frontend && yarn start
 ```
-After hitting send, a hashed version of the email should be in the response if no issues arise.
+A page should automatically open up with the application. If not, open your browser to localhost:3000.    
+  
+To start the server, on the other terminal input, 
+```
+    cd backend && node server.js
+```
+
+## Update Database and Server Connections
+To update database and server connections, if your project has a backend > config > config.js file locally, then change the following field to your desired database. 
+```
+    db: { 
+        uri: ''
+    } 
+```
+Otherwise you can manually input a database within the backend > config > express.js file on line 11 and change the following code
+```
+    process.env.MONGODB_URI || require('./config').db.uri
+```

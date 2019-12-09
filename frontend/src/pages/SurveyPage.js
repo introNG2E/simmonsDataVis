@@ -27,15 +27,21 @@ class SurveyPage extends Component {
             redirecting: false,
             modalIsOpen: false
         };
+        this.onComplete = this.onComplete.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.onHomePress = this.onHomePress.bind(this);
     }
-    json = data;
 
     // Called when survey is submitted
+<<<<<<< HEAD
     // Puts into the database the survey results + the userId
     onComplete = (result) => {
+||||||| merged common ancestors
+    onComplete = (result) => {
+=======
+    onComplete (result) {
+>>>>>>> develop
 
         // user is appended to route to make put request
         const id = this.props.getId;
@@ -74,7 +80,7 @@ class SurveyPage extends Component {
     }
 
     render() {
-        const model = new Survey.Model(this.json);
+        const model = new Survey.Model(data);
         const {redirecting} = this.state;
 
         // Redirects to data page when survey is complete
