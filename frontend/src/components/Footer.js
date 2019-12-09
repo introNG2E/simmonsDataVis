@@ -29,8 +29,3 @@ const Footer = () => {
 }
 
 export default Footer;
-// 1. Copyright Info
-// 2. Privacy Policy. https://www.freeprivacypolicy.com/free-privacy-policy-generator.php. Need website url first. Might not be needed. 
-// 3. Terms of Use
-// 4. Contact Information. Top right of the header. Contact form, not just an email link preferably
-// 5. Links to other parts of the website.

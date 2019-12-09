@@ -1,3 +1,10 @@
+/*
+SPIDER CHART:
+Uses react-svg-radar-chart to create the Spider Chart.
+The package itself is essentially a high-level version of 
+creating the chart using svg. 
+*/
+
 import React, { Component } from 'react';
 import RadarChart from 'react-svg-radar-chart';
 import 'react-svg-radar-chart/build/css/index.css';
@@ -30,12 +37,14 @@ class SpiderChart extends Component {
             return d + 'z';
           };
 
+        // If options are not specified where the RadarChart is rendered,
+        // these options are used.
         const defaultOptions = {
             size: 200,
             axes: true, // show axes?
             scales: 4, // show scale circles?
             captions: true, // show captions?
-            captionMargin: 35,
+            captionMargin: 35, // move margins? Width of the RadarChart is set to the entire page in the SpiderChart.css
             dots: false, // show dots?
             zoomDistance: 1.2, // where on the axes are the captions?
             setViewBox: (options) => `-${options.captionMargin} 0 ${options.size + options.captionMargin * 2} ${options.size}`, // custom viewBox ?
@@ -46,8 +55,8 @@ class SpiderChart extends Component {
             captionProps: () => ({
               className: 'caption',
               textAnchor: 'middle',
-              fontSize: 16,
-              fontFamily: 'sans-serif'
+              fontSize: 16, // change font size of the captions?
+              fontFamily: 'sans-serif' // change font?
             }),
             dotProps: () => ({
               className: 'dot',

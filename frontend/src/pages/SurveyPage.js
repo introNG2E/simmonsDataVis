@@ -1,3 +1,13 @@
+/*
+SURVEY PAGE:
+This file renders the survey page of the website. 
+The survey is rendered from the JSON file in ../data/survey.js.
+If you wish to modify the survey, you can go to https://surveyjs.io/
+and copy and paste the JSON file into the survey creator to use their
+user-friendly UI to modify the survey.
+
+*/
+
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
@@ -24,6 +34,7 @@ class SurveyPage extends Component {
     json = data;
 
     // Called when survey is submitted
+    // Puts into the database the survey results + the userId
     onComplete = (result) => {
 
         // user is appended to route to make put request
@@ -49,6 +60,7 @@ class SurveyPage extends Component {
 
     };
 
+    // Moves to the homepage
     onHomePress() {
         this.props.history.push('/Homepage/' + this.props.getId);
     }

@@ -1,3 +1,20 @@
+/*
+DATA PAGE:
+The purpose of this page is to render the data from the survey 
+in a visually interesting way. User data should be loaded onto the
+Spider Chart when the page loads up. The interface sets filter variables
+in the state and the "Add Dataset" button filters the database based on 
+those variables before adding them to the dataSets array and passes that
+down to the Spider Chart to render onto the screen. 
+
+In addition, the Responsive Bar is used to show which activity
+is most associated with the quality of character that is depicted
+as the captions to the Spider Chart. A dropdown menu allows the user
+to select the quality they wish to improve upon and the Responsive Bar
+should update based on the option selected to show the correlated
+activities in descending order.
+*/
+
 import React, {Component} from 'react';
 import {
     Button,
@@ -20,9 +37,9 @@ import data from '../data/data.js';
 class DataPage extends Component {
 
     state = {
-        gender: "", // 1: Woman, 2: Man, 3: Trans, 4: Other, 5: I don't want to respond
-        race: "", // 1: Asian, 2: Black, 3: Hispanic, 4: Pacific, 5: White, 6: Other, 7: Mix
-        major: "", // 1: General Engineering, 2: Civil Engineering, 3: Construction
+        gender: "", 
+        race: "", 
+        major: "", 
         dataSets: [], // This should hold all of the data sets to be passed down and depicted in SpiderChart.js
         graphColor: 0, // index variable to cycle through colors.
         numObservations: 0,
@@ -59,11 +76,15 @@ class DataPage extends Component {
         this.onHomePress = this.onHomePress.bind(this);
     }
 
+    // Moves to the homepage
     onHomePress = () => {
         this.props.history.push('/homepage/' + this.props.getId);
     }
 
-
+    // Creates an Ingenuity array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgIngenuity = () => {
         this.setState({vis: 1})
         this.setState({outOption: 1});
@@ -87,6 +108,11 @@ class DataPage extends Component {
         return ingenuity;
 
     };
+
+    // Creates a Creativity array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgCreativity = () => {
         this.setState({outOption: 2});
         var creativity = [];
@@ -111,6 +137,10 @@ class DataPage extends Component {
         return creativity;
     };
 
+    // Creates a Communication array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgCommunication = () => {
         this.setState({outOption: 3});
         var communication = [];
@@ -132,6 +162,11 @@ class DataPage extends Component {
         return communication;
 
     };
+
+    // Creates a Business array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgBusiness = () => {
         this.setState({outOption: 4});
         var business = [];
@@ -155,6 +190,11 @@ class DataPage extends Component {
         return business;
 
     };
+
+    // Creates a Leadership array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgLeadership = () => {
         this.setState({outOption: 5});
         var leadership = [];
@@ -178,6 +218,11 @@ class DataPage extends Component {
         return leadership;
 
     };
+
+    // Creates an ethical array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgEthical = () => {
         this.setState({outOption: 6});
         var ethical = [];
@@ -200,6 +245,11 @@ class DataPage extends Component {
         return ethical;
 
     };
+
+    // Creates an Professionalism array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgProfessionalism = () => {
         this.setState({outOption: 7});
         var professionalism = [];
@@ -222,6 +272,11 @@ class DataPage extends Component {
         return professionalism;
 
     };
+
+    // Creates a Dynamism array that consists of the pair of data of what
+    // users listed as their most influential activity and it's value.
+    // Then updates the UI of the Responsive Bar to match the option selected
+    // before rendering.
     avgDynamism = () => {
         this.setState({outOption: 8});
         var dynamism = [];
@@ -245,7 +300,11 @@ class DataPage extends Component {
 
 
     // Creates a new dataSet array to push onto the dataSets array 
-    // that gets passed onto SpiderChart.js. T
+    // that gets passed onto SpiderChart.js. Using the filter variables,
+    // the database is filtered based on the them one at a time
+    // then the scores of the qualities are summed up and then divided by the count
+    // to get the averages. The new dataSet Array is then created using these
+    // averages and then assigned a color from the colors array.
     addDataSet(e) {
         //var filteredData = data;
         var colors = ["black", "aqua", "red", "yellow", "blue", "pink", "grey", "brown", "orange", "purple"]
@@ -293,7 +352,8 @@ class DataPage extends Component {
                 sumE8 += filteredData[entry].survey.E8;
                 sumE9 += filteredData[entry].survey.E9;
             }
-        
+            // Values are divided by four because the Spider Chart only displays numbers from 0 to 1 properly.
+            // Higher values go out of bounds of the Chart.
             newDataSet = [{
                 data: {
                     gender: this.state.gender,
@@ -327,14 +387,19 @@ class DataPage extends Component {
         })
     }
 
-    // Simply changes the state of the selected variable to the value of the DropDown menu.
+    // Simply changes the state of the selected variable to the value of the DropDown menu
+    // used for selecting filter variables.
     handleChange(e) {
         this.setState({
             [e.target.id]: e.target.value
         })
     }
 
-    // Pops the last element of the array. 
+    // Pops the last element of the dataSets array. 
+    // If this needs to be changed to be able to select
+    // an array of choice, a way to identify and list all available dataSets
+    // in the dataSets array will be needed. Most likely an id of some sort + dropdown menu
+    // + state array of dataSets.
     removeDataSet(e) {
         var index = this.state.dataSets.length - 1;
         this.setState({
@@ -342,6 +407,9 @@ class DataPage extends Component {
         });
     }
 
+    // Gest the users results from the database and then
+    // renders their results onto the Spider Chart when the
+    // Website loads.
     componentDidMount() {
         this.onComplete('');
         const id = this.props.getId;
