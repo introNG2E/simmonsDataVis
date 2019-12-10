@@ -14,7 +14,7 @@ export default function Routes({ appProps }) {
         <AppliedRoute path="/adminpanel" exact component={adminPanel} appProps={appProps} />
         <AppliedRoute path="/statistics" exact component={StatisticsPage} appProps={appProps}/>
         { /* Finally, catch all unmatched routes */ }
-        <Route component={adminEntry} />
+        <Route component={Homepage} />
       </Switch>
     );
   }
