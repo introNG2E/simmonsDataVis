@@ -1,46 +1,100 @@
-import React, { useState } from "react";
-import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
-import '../styles/login.css'
+import React, { Component, useState } from "react";
 import {
-  Button,
+  Divider,
   Form,
   Grid,
-  Header,
-  Message,
-  Segment,
-  Container
+  Segment
 } from "semantic-ui-react";
+import "../styles/adminEntry.css";
 
-export default function Login(props) {
-  const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return password.length > 0;
+class adminEntry extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    if(password === "admin"){
-      props.userHasAuthenticated(true);//this initializes the isAuthenticated state variable to false, as in the user is not logged in
-      props.history.push("/adminpanel");
+
+
+  state = {
+    password: "",
+    submittedPassword: ""
+    
+  };
+
+  handleChange = (e, { name, value }) =>
+    this.setState({
+      [name]: value
+    });
+
+  handleSubmit = () => {
+    const { password } = this.state;
+
+    this.setState({
+      submittedPassword: password
+    });
+    if (password == "admin") { //was unable to implement props to check admin password
+      // alert("Successful Login");
+      this.setState({unlock: this.state.unlock + 1});
+      console.log(this.state.unlock);
+      //this.props.isAuthenticated({true});
+      this.props.history.push("/adminpanel");
+    } else {
+      this.setState(prevState => ({
+      unlock: !prevState.unlock}));
+      // this.props.history.push("/adminpanel");
+      // alert("Unsuccessful Login");
     }
-  }
+    /*this.props.dispatch(signUp(formData)).then(({isAuthenticated}) => {
+            if (isAuthenticated) {
+                // Redirect to the home page if the user is authenticated
+                this.props.router.push('/');
+            }
+        }*/
+  };
 
-  return (
-    <div className="Login">
-      <Form onSubmit={handleSubmit}>
-        <Form controlId="password" bsSize="large">
-          <Form>Password</Form>
-          <FormControl
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            type="password"
-          />
-        </Form>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-      </Form>
-    </div>
-  );
+  render() {
+    const { password, submittedPassword } = this.state;
+
+    return (
+      <div className="page">
+        <br></br>
+        <Grid centered columns={2}>
+          <Grid.Column centered>
+          <Divider hidden/>
+          <Divider hidden/>
+          <Divider hidden/>
+            <Segment>
+              <Form onSubmit={this.handleSubmit}>
+                <div className="input">
+                
+                <div className="title">Admin Login</div>
+                  <Form.Input
+                    //fluid
+                    icon="lock"
+                    iconPosition="left"
+                    //placeholder="Password"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    value={password}
+                    onChange={this.handleChange}
+                  />
+
+                  <Form.Button
+                    Button
+                    color="grey"
+                    fluid
+                    size="large"
+                    content="Submit"
+                  />
+                </div>
+              </Form>
+            </Segment>
+          </Grid.Column>
+        </Grid>
+      </div>
+    );
+  }
 }
+
+export default adminEntry;
