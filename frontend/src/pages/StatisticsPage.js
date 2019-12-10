@@ -11,6 +11,7 @@ import json2csv from "json2csv";
 //import { CSVLink } from "react-csv";
 class StatisticsPage extends Component {
 
+    
     state = {
         gender: "", // 1: Woman, 2: Man, 3: Trans, 4: Other, 5: I don't want to respond
         race: "", // 1: Asian, 2: Black, 3: Hispanic, 4: Pacific, 5: White, 6: Other, 7: Mix
