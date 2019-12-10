@@ -2,7 +2,6 @@ const should = require('should'),
     mongoose = require('mongoose'), 
     assert =  require('chai').assert;
     Student = require('../models/students.model');
-    // config = require('../config/config');
 
 const student = {
     email: "asdf@ufl.com",

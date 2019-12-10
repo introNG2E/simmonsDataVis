@@ -1,6 +1,6 @@
 # Simmons Data Visualization
 
-This web application is a survey taking and data visualization website where students complete a survey and can view 
+This web application is a survey taking and data visualization website where students complete a survey and can view their qualities, such as Creativity and Communication, displayed in a spider chart. Students can compare their results with other survey takers by adding dataset(s) by gender, race/ethnicity, and/or major. Students can also look at a bar chart which uses other students survey results on the activities that can improve specific qualities.
 
 ## Link
 https://simmons-data-vis.herokuapp.com/
@@ -26,15 +26,19 @@ Data Page
 Admin Page
 
 ## Run Project
-Go into the develop branch and create two terminals. On one terminal,
+Go into the develop branch 
 ```
-    cd frontend && yarn start
+    git checkout develop
+```
+and create two terminals. On one terminal,
+```
+    cd frontend && npm install && yarn start
 ```
 A page should automatically open up with the application. If not, open your browser to localhost:3000.    
   
 To start the server, on the other terminal input, 
 ```
-    cd backend && node server.js
+    cd backend && npm install && node server.js
 ```
 
 ## Update Database and Server Connections

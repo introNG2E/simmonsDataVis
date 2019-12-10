@@ -63,6 +63,7 @@ const studentSchema = new Schema({
     }
 });
 
+// Before saving student into database, updates the updated_at and created_at (if student is new) 
 studentSchema.pre('save', function(next) {
     const currentDate = new Date();
     this.updated_at = currentDate;

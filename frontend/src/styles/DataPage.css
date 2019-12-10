@@ -68,3 +68,25 @@ Form {
 .ui.segment {
   color: #777777;
 }
+
+.bar {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.menu {
+  width: 80%;
+  flex-grow: 1;
+}
+.groups{
+  flex: 1 1 auto;
+  width: 50%;
+  right:0;
+}
+
+.graph {
+  height: 60vh;
+  width: 100vw;
+}
