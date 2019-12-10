@@ -1,7 +1,8 @@
 const should = require('should'), 
     mongoose = require('mongoose'), 
     assert =  require('chai').assert;
-    Student = require('../models/students.model');
+    Student = require('../models/students.model'), 
+    config = require('../config/config');
 
 const student = {
     email: "asdf@ufl.com",
@@ -14,7 +15,7 @@ const student = {
 let id;
 describe('Student Schema Unit Tests', function(){
     before(function(done) {
-        mongoose.connect(process.env.MONGODB_URI || require('../config/config').db.uri, { useNewUrlParser: true, useUnifiedTopology: true });
+        mongoose.connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true });
         mongoose.set('useCreateIndex', true);
         mongoose.set('useFindAndModify', false);
         done();

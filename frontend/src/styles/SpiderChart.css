@@ -2,7 +2,3 @@
     display: flex;
     justify-content: center;
 }
-
-svg {
-    min-width: 100%;
-}

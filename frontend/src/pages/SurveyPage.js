@@ -17,7 +17,6 @@ class SurveyPage extends Component {
             redirecting: false,
             modalIsOpen: false
         };
-        this.onComplete = this.onComplete.bind(this);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.onHomePress = this.onHomePress.bind(this);
@@ -35,7 +34,7 @@ class SurveyPage extends Component {
         )
         .then(res => {
 
-            // If put request is successful, sets redirecting to true after a certain time
+            // If put request is successful, sets redirecting to true
             setTimeout( () => {
                 this.setState({
                     redirecting: true
@@ -80,7 +79,7 @@ class SurveyPage extends Component {
                 <Divider hidden/>
                 <Grid>
                     <Grid.Row centered stretched>
-                        <Modal open={this.state.modalIsOpen} size="tiny" trigger={<Button basic color = "black" centered = {"true"} onClick={this.openModal}>
+                        <Modal open={this.state.modalIsOpen} size="tiny" trigger={<Button basic color = "black"centered = {true} onClick={this.openModal}>
                                 <Icon name='home'/> Home
                             </Button>}
                     >

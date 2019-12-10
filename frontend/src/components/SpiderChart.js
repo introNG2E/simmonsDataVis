@@ -46,7 +46,7 @@ class SpiderChart extends Component {
             captionProps: () => ({
               className: 'caption',
               textAnchor: 'middle',
-              fontSize: 15,
+              fontSize: 12,
               fontFamily: 'sans-serif'
             }),
             dotProps: () => ({
