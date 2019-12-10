@@ -2,7 +2,7 @@
 
 exports[`renders correctly with id passed to it 1`] = `
 <div
-  class="box"
+  className="box"
 >
   <fieldset>
     <legend>
@@ -36,12 +36,12 @@ exports[`renders correctly with id passed to it 1`] = `
                 None
               </option>
               <option
-                value="1"
+                value="2"
               >
                 Woman
               </option>
               <option
-                value="2"
+                value="1"
               >
                 Man
               </option>
@@ -76,7 +76,7 @@ exports[`renders correctly with id passed to it 1`] = `
             onSubmit={[Function]}
           >
             <label>
-              Race/Ethnicty:
+              Race/Ethnicity:
             </label>
             <select
               id="raceEthnicity"
@@ -91,37 +91,32 @@ exports[`renders correctly with id passed to it 1`] = `
               <option
                 value="1"
               >
-                Asian
+                American Indian or Alaska Native
               </option>
               <option
                 value="2"
               >
-                Black or African American
+                Asian
               </option>
               <option
                 value="3"
               >
-                Hispanic, Latino, or Spanish Origin
+                Black or African American
               </option>
               <option
                 value="4"
               >
-                Native Hawaiian or Other Pacific Islander
+                Hispanic, Latino, or Spanish Origin
               </option>
               <option
                 value="5"
               >
-                White
+                Native Hawaiian or Other Pacific Islander
               </option>
               <option
                 value="6"
               >
-                Other
-              </option>
-              <option
-                value="7"
-              >
-                Mix
+                White
               </option>
             </select>
           </form>
@@ -242,50 +237,65 @@ exports[`renders correctly with id passed to it 1`] = `
       </div>
     </div>
     <div
-      className="ui big label"
-      floated="left"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "10px",
-        }
-      }
-    >
-      <i
-        aria-hidden="true"
-        className="users icon"
-        onClick={[Function]}
-      />
-      0
-    </div>
-    <div
-      className="ui right floated buttons"
+      className="ui three column grid"
     >
       <div
-        className="ui grey small right attached button"
-        onClick={[Function]}
-        role="button"
-        style={
-          Object {
-            "margin": "10px",
-          }
-        }
-        tabIndex={0}
+        className="left floated column"
       >
-        Add Dataset
+        <div
+          className="ui big label"
+          floated="left"
+          onClick={[Function]}
+          style={
+            Object {
+              "margin": "10px",
+            }
+          }
+        >
+          <i
+            aria-hidden="true"
+            className="users icon"
+            onClick={[Function]}
+          />
+          0
+        </div>
       </div>
       <div
-        className="ui grey small right attached button"
-        onClick={[Function]}
-        role="button"
-        style={
-          Object {
-            "margin": "10px",
-          }
-        }
-        tabIndex={0}
+        className="middle aligned column"
+      />
+      <div
+        className="middle aligned column"
       >
-        Remove Dataset
+        <div
+          className="ui right floated buttons"
+        >
+          <div
+            className="ui grey small right attached button"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "margin": "10px",
+              }
+            }
+            tabIndex={0}
+          >
+            Add Dataset
+          </div>
+          <div
+            className="ui grey small right attached button"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "margin": "10px",
+              }
+            }
+            tabIndex={0}
+          >
+            Remove Dataset
+          </div>
+        </div>
       </div>
     </div>
   </fieldset>
@@ -370,9 +380,9 @@ exports[`renders correctly with id passed to it 1`] = `
         <g>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="0.0000"
             y="-237.5000"
@@ -381,9 +391,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="167.9379"
             y="-167.9379"
@@ -392,9 +402,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="237.5000"
             y="0.0000"
@@ -403,9 +413,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="167.9379"
             y="167.9379"
@@ -414,9 +424,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="0.0000"
             y="237.5000"
@@ -425,9 +435,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-167.9379"
             y="167.9379"
@@ -436,9 +446,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-237.5000"
             y="0.0000"
@@ -447,9 +457,9 @@ exports[`renders correctly with id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-167.9379"
             y="-167.9379"
@@ -461,239 +471,308 @@ exports[`renders correctly with id passed to it 1`] = `
     </svg>
   </div>
   <div
-    className="ui grey fluid buttons"
-    styles={
-      Object {
-        "margin": "4px",
-      }
-    }
+    className="bar"
   >
     <div
-      aria-expanded={false}
-      className="ui button fluid simple dropdown"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      role="listbox"
-      tabIndex={0}
+      className="ui grey inverted menu menu"
     >
-      <span>
-        Select a Category to Display
-      </span>
-      <i
-        aria-hidden="true"
-        className="dropdown icon"
-        onClick={[Function]}
-      />
       <div
-        className="menu transition"
+        className="menu menu"
+        fluid={true}
       >
         <div
-          aria-checked={false}
-          aria-selected={true}
-          className="selected item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
+          className="ui grey right floated buttons groups"
         >
-          <span
-            className="text"
+          <div
+            aria-expanded={false}
+            className="ui button fluid simple dropdown"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
           >
-            Ingenuity
-          </span>
+            <span>
+              <i
+                aria-hidden="true"
+                className="hand point right large icon"
+                onClick={[Function]}
+              />
+              Select a Category to Display
+            </span>
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            >
+              <div
+                aria-checked={false}
+                aria-selected={true}
+                className="selected item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Ingenuity
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Creativity
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Communication
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Business & Management 
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Leadership
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  High Ethical Standards
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Professionalism
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Dynamism, Agility, Resilience, and Flexibility
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
+          className="ui grey right floated buttons groups"
         >
-          <span
-            className="text"
+          <div
+            aria-expanded={false}
+            className="ui button fluid simple dropdown"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
           >
-            Creativity
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Communication
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Business & Management 
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Leadership
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            High Ethical Standards
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Professionalism
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Dynamism, Agility, Resilience, and Flexibility
-          </span>
+            <span>
+              <i
+                aria-hidden="true"
+                className="grey users large icon"
+                onClick={[Function]}
+              />
+              Select a Current Data Set
+            </span>
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            >
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  All Users
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <h3
-    className="ui dividing center aligned header"
-  >
-    
-  </h3>
   <div
-    style={
-      Object {
-        "height": 450,
-        "width": 1080,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <div
-    className="homeSection"
-  >
-    <div
-      className="ui divider"
-    />
-    <div
-      className="ui grid"
+    className="ui divider"
+  />
+  <div>
+    <h3
+      className="ui center aligned header"
     >
       <div
-        className="stretched row"
+        className="content"
+      >
+        
+        <div
+          className="sub header"
+        >
+          Based on: 
+          All Users
+        </div>
+      </div>
+    </h3>
+    <div
+      className="graph"
+    >
+      <div
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="homeSection"
+    >
+      <div
+        className="ui divider"
+      />
+      <div
+        className="ui grid"
       >
         <div
-          centered={true}
-          className="stretched column"
+          className="stretched row"
         >
           <div
-            className="ui center aligned grid"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            centered={true}
+            className="stretched column"
           >
-            <button
-              className="ui black tiny basic button"
-              onClick={[Function]}
+            <div
+              className="ui center aligned grid"
             >
-              <i
-                aria-hidden="true"
-                className="home icon"
+              <button
+                className="ui black tiny basic button"
                 onClick={[Function]}
-              />
-               Home
-            </button>
+              >
+                <i
+                  aria-hidden="true"
+                  className="home icon"
+                  onClick={[Function]}
+                />
+                Home
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -704,7 +783,7 @@ exports[`renders correctly with id passed to it 1`] = `
 
 exports[`renders correctly without id passed to it 1`] = `
 <div
-  class="box"
+  className="box"
 >
   <fieldset>
     <legend>
@@ -738,12 +817,12 @@ exports[`renders correctly without id passed to it 1`] = `
                 None
               </option>
               <option
-                value="1"
+                value="2"
               >
                 Woman
               </option>
               <option
-                value="2"
+                value="1"
               >
                 Man
               </option>
@@ -778,7 +857,7 @@ exports[`renders correctly without id passed to it 1`] = `
             onSubmit={[Function]}
           >
             <label>
-              Race/Ethnicty:
+              Race/Ethnicity:
             </label>
             <select
               id="raceEthnicity"
@@ -793,37 +872,32 @@ exports[`renders correctly without id passed to it 1`] = `
               <option
                 value="1"
               >
-                Asian
+                American Indian or Alaska Native
               </option>
               <option
                 value="2"
               >
-                Black or African American
+                Asian
               </option>
               <option
                 value="3"
               >
-                Hispanic, Latino, or Spanish Origin
+                Black or African American
               </option>
               <option
                 value="4"
               >
-                Native Hawaiian or Other Pacific Islander
+                Hispanic, Latino, or Spanish Origin
               </option>
               <option
                 value="5"
               >
-                White
+                Native Hawaiian or Other Pacific Islander
               </option>
               <option
                 value="6"
               >
-                Other
-              </option>
-              <option
-                value="7"
-              >
-                Mix
+                White
               </option>
             </select>
           </form>
@@ -944,50 +1018,65 @@ exports[`renders correctly without id passed to it 1`] = `
       </div>
     </div>
     <div
-      className="ui big label"
-      floated="left"
-      onClick={[Function]}
-      style={
-        Object {
-          "margin": "10px",
-        }
-      }
-    >
-      <i
-        aria-hidden="true"
-        className="users icon"
-        onClick={[Function]}
-      />
-      0
-    </div>
-    <div
-      className="ui right floated buttons"
+      className="ui three column grid"
     >
       <div
-        className="ui grey small right attached button"
-        onClick={[Function]}
-        role="button"
-        style={
-          Object {
-            "margin": "10px",
-          }
-        }
-        tabIndex={0}
+        className="left floated column"
       >
-        Add Dataset
+        <div
+          className="ui big label"
+          floated="left"
+          onClick={[Function]}
+          style={
+            Object {
+              "margin": "10px",
+            }
+          }
+        >
+          <i
+            aria-hidden="true"
+            className="users icon"
+            onClick={[Function]}
+          />
+          0
+        </div>
       </div>
       <div
-        className="ui grey small right attached button"
-        onClick={[Function]}
-        role="button"
-        style={
-          Object {
-            "margin": "10px",
-          }
-        }
-        tabIndex={0}
+        className="middle aligned column"
+      />
+      <div
+        className="middle aligned column"
       >
-        Remove Dataset
+        <div
+          className="ui right floated buttons"
+        >
+          <div
+            className="ui grey small right attached button"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "margin": "10px",
+              }
+            }
+            tabIndex={0}
+          >
+            Add Dataset
+          </div>
+          <div
+            className="ui grey small right attached button"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "margin": "10px",
+              }
+            }
+            tabIndex={0}
+          >
+            Remove Dataset
+          </div>
+        </div>
       </div>
     </div>
   </fieldset>
@@ -1072,9 +1161,9 @@ exports[`renders correctly without id passed to it 1`] = `
         <g>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="0.0000"
             y="-237.5000"
@@ -1083,9 +1172,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="167.9379"
             y="-167.9379"
@@ -1094,9 +1183,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="237.5000"
             y="0.0000"
@@ -1105,9 +1194,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="167.9379"
             y="167.9379"
@@ -1116,9 +1205,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="0.0000"
             y="237.5000"
@@ -1127,9 +1216,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-167.9379"
             y="167.9379"
@@ -1138,9 +1227,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-237.5000"
             y="0.0000"
@@ -1149,9 +1238,9 @@ exports[`renders correctly without id passed to it 1`] = `
           </text>
           <text
             className="caption"
-            dy={6}
+            dy={7.5}
             fontFamily="sans-serif"
-            fontSize={12}
+            fontSize={15}
             textAnchor="middle"
             x="-167.9379"
             y="-167.9379"
@@ -1163,239 +1252,308 @@ exports[`renders correctly without id passed to it 1`] = `
     </svg>
   </div>
   <div
-    className="ui grey fluid buttons"
-    styles={
-      Object {
-        "margin": "4px",
-      }
-    }
+    className="bar"
   >
     <div
-      aria-expanded={false}
-      className="ui button fluid simple dropdown"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      role="listbox"
-      tabIndex={0}
+      className="ui grey inverted menu menu"
     >
-      <span>
-        Select a Category to Display
-      </span>
-      <i
-        aria-hidden="true"
-        className="dropdown icon"
-        onClick={[Function]}
-      />
       <div
-        className="menu transition"
+        className="menu menu"
+        fluid={true}
       >
         <div
-          aria-checked={false}
-          aria-selected={true}
-          className="selected item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
+          className="ui grey right floated buttons groups"
         >
-          <span
-            className="text"
+          <div
+            aria-expanded={false}
+            className="ui button fluid simple dropdown"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
           >
-            Ingenuity
-          </span>
+            <span>
+              <i
+                aria-hidden="true"
+                className="hand point right large icon"
+                onClick={[Function]}
+              />
+              Select a Category to Display
+            </span>
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            >
+              <div
+                aria-checked={false}
+                aria-selected={true}
+                className="selected item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Ingenuity
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Creativity
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Communication
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Business & Management 
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Leadership
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  High Ethical Standards
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Professionalism
+                </span>
+              </div>
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  Dynamism, Agility, Resilience, and Flexibility
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
+          className="ui grey right floated buttons groups"
         >
-          <span
-            className="text"
+          <div
+            aria-expanded={false}
+            className="ui button fluid simple dropdown"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="listbox"
+            tabIndex={0}
           >
-            Creativity
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Communication
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Business & Management 
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Leadership
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            High Ethical Standards
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Professionalism
-          </span>
-        </div>
-        <div
-          aria-checked={false}
-          aria-selected={false}
-          className="item"
-          onClick={[Function]}
-          role="option"
-          style={
-            Object {
-              "pointerEvents": "all",
-            }
-          }
-        >
-          <span
-            className="text"
-          >
-            Dynamism, Agility, Resilience, and Flexibility
-          </span>
+            <span>
+              <i
+                aria-hidden="true"
+                className="grey users large icon"
+                onClick={[Function]}
+              />
+              Select a Current Data Set
+            </span>
+            <i
+              aria-hidden="true"
+              className="dropdown icon"
+              onClick={[Function]}
+            />
+            <div
+              className="menu transition"
+            >
+              <div
+                aria-checked={false}
+                aria-selected={false}
+                className="item"
+                onClick={[Function]}
+                role="option"
+                style={
+                  Object {
+                    "pointerEvents": "all",
+                  }
+                }
+              >
+                <span
+                  className="text"
+                >
+                  All Users
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <h3
-    className="ui dividing center aligned header"
-  >
-    
-  </h3>
   <div
-    style={
-      Object {
-        "height": 450,
-        "width": 1080,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <div
-    className="homeSection"
-  >
-    <div
-      className="ui divider"
-    />
-    <div
-      className="ui grid"
+    className="ui divider"
+  />
+  <div>
+    <h3
+      className="ui center aligned header"
     >
       <div
-        className="stretched row"
+        className="content"
+      >
+        
+        <div
+          className="sub header"
+        >
+          Based on: 
+          All Users
+        </div>
+      </div>
+    </h3>
+    <div
+      className="graph"
+    >
+      <div
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="homeSection"
+    >
+      <div
+        className="ui divider"
+      />
+      <div
+        className="ui grid"
       >
         <div
-          centered={true}
-          className="stretched column"
+          className="stretched row"
         >
           <div
-            className="ui center aligned grid"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            centered={true}
+            className="stretched column"
           >
-            <button
-              className="ui black tiny basic button"
-              onClick={[Function]}
+            <div
+              className="ui center aligned grid"
             >
-              <i
-                aria-hidden="true"
-                className="home icon"
+              <button
+                className="ui black tiny basic button"
                 onClick={[Function]}
-              />
-               Home
-            </button>
+              >
+                <i
+                  aria-hidden="true"
+                  className="home icon"
+                  onClick={[Function]}
+                />
+                Home
+              </button>
+            </div>
           </div>
         </div>
       </div>

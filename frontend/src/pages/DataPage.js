@@ -272,12 +272,10 @@ class DataPage extends Component {
                 this.setState({major: "-1"});
                 return false;
             } else if (size > 0) {
-                console.log("Greater than 0");
                 this.setState({
                     numObservations: size
                 });
                 this.onComplete([this.state.bgGender, this.state.bgRace, this.state.bgMajor]);
-                console.log(filteredData);
                 let sumE2 = 0, sumE3 = 0, sumE4 = 0, sumE5 = 0, sumE6 = 0, sumE7 = 0, sumE8 = 0, sumE9 = 0;
                 let newDataSet = [];
                 for (let entry = 0, len = size; entry < len; entry++) {
@@ -306,10 +304,6 @@ class DataPage extends Component {
                     },
                     meta: {color: colors[this.state.graphColor]}
                 }];
-                console.log("addDataSet called: ");
-                console.log('Gender: ' + this.state.gender);
-                console.log('Race: ' + this.state.raceEthnicity);
-                console.log('Major: ' + this.state.major);
                 this.setState({
                     dataSets: this.state.dataSets.concat(newDataSet),
                     graphColor: this.state.graphColor + 1
@@ -319,7 +313,6 @@ class DataPage extends Component {
                         graphColor: 0
                     });
                 }
-                console.log(this.state.dataSets);
             }
         }).catch(err => {
             return false;
@@ -344,16 +337,13 @@ class DataPage extends Component {
             let _thisRef = this;
             //if there are other filter criteria beyond "all users/default"
             let index = this.state.dataSets.length - 1;
-            console.log(this.state.dataSets);
             this.setState({
                 dataSets: this.state.dataSets.filter((_, i) => i !== index)
             });
             this.setState({
                 con: this.state.con.filter((_, i) => i !== this.state.con.length - 1)
             }, function () {
-                console.log(_thisRef.state.con);
                 _thisRef.setState({disp: [..._thisRef.state.disp]});
-                console.log(_thisRef.state.disp);
                 _thisRef.onComplete.call(this, [0, 0, 0]);
             });
             this.setState({gender: '-1'});
@@ -398,7 +388,6 @@ class DataPage extends Component {
     }
 
     onComplete = ([genderBg, raceBg, majorBg]) => {
-        console.log(this.state.con);
         if (this.state.gender === -1 && genderBg != 0) {
             this.setState({bgGender: 0});
         }
@@ -411,13 +400,6 @@ class DataPage extends Component {
         this.setState({bgGender: genderBg});
         this.setState({bgRace: raceBg});
         this.setState({bgMajor: majorBg});
-        /*console.log(this.state.bgGender);
-        console.log(this.state.bgMajor);
-        console.log(this.state.bgRace);
-        console.log(genderBg);
-        console.log(genderBg);
-        console.log(raceBg);
-        console.log(majorBg);*/
         let options = [genderBg, raceBg, majorBg];
         options.forEach(function (item, i) {
             options[i] = String(options[i]); //converts to a string object
@@ -436,11 +418,8 @@ class DataPage extends Component {
                 }
                 this.setState({x: d}); //sets the average value
                 this.setState({act: act}); //sets the activity name
-                console.log(this.state.x);
-                console.log(this.state.act);
                 this.setState({toView: this.state.currDataSets.concat([d])});
                 this.handleCurrDataSets.call(''); //adds the option to the data set dropdown
-                console.log(genderBg, raceBg, majorBg);
                 return this.avgIngenuity(this.state.bgGender, this.state.bgRace, this.state.bgMajor);
             })
             .catch(err => {
@@ -454,9 +433,6 @@ class DataPage extends Component {
         let genStr = gen[this.state.bgGender];
         let raceStr = eth[this.state.bgRace];
         let majStr = maj[this.state.bgMajor];
-        console.log(this.state.bgGender);
-        console.log(this.state.bgRace);
-        console.log(this.state.bgMajor);
         let concept = "";
         if (this.state.bgMajor == 0) {
             if (this.state.bgRace != 0) {
@@ -496,9 +472,7 @@ class DataPage extends Component {
                 }
             }
         }
-        console.log(concept);
         this.setState({textBased: concept});
-        console.log(this.state.bgMajor === undefined);
         let hasConcep = this.state.con.some(con => con['text'] === concept);
         if (hasConcep === false) {
             //Runs if the combination of search criteria are NOT currently in the bargraph dropdown
@@ -530,7 +504,7 @@ class DataPage extends Component {
             <span><Icon size="large" bordered={false} name='hand point right'/>{'Select a Category to Display'}</span>
         );
         const triggerIcon = (
-            <span><Icon color='white' size="large" bordered={false} name='users'/>{'Select a Current Data Set'}</span>
+            <span><Icon color='grey' size="large" bordered={false} name='users'/>{'Select a Current Data Set'}</span>
         );
 
 
@@ -608,7 +582,7 @@ class DataPage extends Component {
                                 <Icon name='users'/>{this.state.numObservations}
                             </Label>
                         </Grid.Column>
-                        <Grid.Column verticalAlign="center">
+                        <Grid.Column verticalAlign="middle">
                             {this.state.popUp === true &&
                             <Button size='medium' color='yellow' onClick={this.closeModal} toggle={!this.popUp}>
                                 <Icon name='remove' color="black"/><b className="text">Warning: no Students Match the
@@ -616,7 +590,7 @@ class DataPage extends Component {
                             </Button>
                             }
                         </Grid.Column>
-                        <Grid.Column verticalAlign="center">
+                        <Grid.Column verticalAlign="middle">
                             <Button.Group floated="right">
                                 <Button style={{margin: '10px'}} color='grey' attached="right" size="small"
                                         onClick={this.addDataSet.bind(this)}>
