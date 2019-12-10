@@ -34,14 +34,8 @@ class SurveyPage extends Component {
     }
 
     // Called when survey is submitted
-<<<<<<< HEAD
     // Puts into the database the survey results + the userId
     onComplete = (result) => {
-||||||| merged common ancestors
-    onComplete = (result) => {
-=======
-    onComplete (result) {
->>>>>>> develop
 
         // user is appended to route to make put request
         const id = this.props.getId;
