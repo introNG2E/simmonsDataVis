@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-d
 import Homepage from "./pages/Homepage";
 import StatisticsPage from "./pages/StatisticsPage";
 export default function Routes({ appProps }) {
-    const [isAuthenticated, userHasAuthenticated] = useState(false);//delcared twice
+    // const [isAuthenticated, userHasAuthenticated] = useState(false);//delcared twice
     //routes for the admin page
     return (
       <Switch>
