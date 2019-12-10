@@ -423,7 +423,7 @@ class DataPage extends Component {
             options[i] = String(options[i]); //converts to a string object
         });
         axios.post(
-            '/api/students/data', {arr: options}
+            'http://localhost:8080/api/students/data', {arr: options}
         )
             .then(res => {
                 let d = [];
