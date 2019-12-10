@@ -6,9 +6,6 @@ router.route('/')
     .get(students.list);
 
 router.route('/data')
-    .get(students.surveysArray);
-
-router.route('/data/set')
     .post(students.studentsByDataSet);
 
 router.route('/:studentId')
