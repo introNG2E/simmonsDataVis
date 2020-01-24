@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-// const creds = require('../config/config.js');
 
 function body(userId){
   const link = 'localhost:3000/homepage/' /*'https://simmons-data-vis.herokuapp.com/homepage/'*/+ userId ;
