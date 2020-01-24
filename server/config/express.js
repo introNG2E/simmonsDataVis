@@ -42,14 +42,13 @@ module.exports.init = function() {
 
     // If web app is in production, serves build folder
     if(process.env.NODE_ENV === 'production'){
-      app.use(express.static('../frontend/build'));
+      app.use(express.static(path.join(__dirname, '../../client/build')));
   
       // Routes all other requests to react application
       app.get('*', function(req, res) {
-          res.sendFile(path.resolve('../frontend/build', 'index.html'));
+        res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
       });
   }
 
    return app;
 }
-  

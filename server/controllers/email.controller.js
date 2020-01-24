@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 function body(userId){
-  const link = 'localhost:3000/homepage/' /*'https://simmons-data-vis.herokuapp.com/homepage/'*/+ userId ;
+  const link = /*'localhost:3000/homepage/'*/ 'https://simmons-data-vis.herokuapp.com/homepage/'+ userId ;
 
   return "Hi, to conduct your survey please follow this link: " + link;
 }
