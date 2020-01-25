@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer');
-// const creds = require('../config/config.js');
 
 function body(userId){
-  const link = 'localhost:3000/homepage/' /*'https://simmons-data-vis.herokuapp.com/homepage/'*/+ userId ;
+  const link = 'https://simmons-data-vis.herokuapp.com/homepage/' + userId ;
 
   return "Hi, to conduct your survey please follow this link: " + link;
 }
@@ -16,7 +15,7 @@ function establishTransport() {
     }
   }
 
-  var transporter = nodemailer.createTransport(transport)
+  let transporter = nodemailer.createTransport(transport)
 
   transporter.verify((error, success) => {
     if (error) {
