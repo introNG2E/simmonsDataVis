@@ -47,6 +47,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/plugins/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-jest": "^24.9.0",

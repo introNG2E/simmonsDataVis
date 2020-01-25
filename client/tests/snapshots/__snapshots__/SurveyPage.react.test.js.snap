@@ -49,20 +49,20 @@ exports[`renders correctly with id passed to it 1`] = `
               role="progressbar"
               style={
                 Object {
-                  "width": "20%",
+                  "width": "17%",
                 }
               }
             >
               <span
                 className="undefined sv-hidden"
               >
-                Page 1 of 5
+                Page 1 of 6
               </span>
             </div>
             <span
               className="undefined undefined"
             >
-              Page 1 of 5
+              Page 1 of 6
             </span>
           </div>
           <div
@@ -74,7 +74,7 @@ exports[`renders correctly with id passed to it 1`] = `
               <span
                 style={null}
               >
-                Demographics
+                
               </span>
             </h4>
             <div
@@ -97,15 +97,6 @@ exports[`renders correctly with id passed to it 1`] = `
                   }
                 }
               >
-                <h4
-                  className="sv_p_title"
-                >
-                  <span
-                    style={null}
-                  >
-                    General
-                  </span>
-                </h4>
                 <div
                   style={
                     Object {
@@ -127,65 +118,25 @@ exports[`renders correctly with id passed to it 1`] = `
                       }
                     >
                       <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Age"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            1
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Age
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            *
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
                         className=""
                       >
-                        <input
-                          aria-label="Age"
-                          aria-required={true}
-                          className="sv_q_text_root"
-                          disabled={false}
-                          id="sq_100i"
-                          maxLength={null}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your age here"
-                          size={25}
-                          type="number"
-                          value=""
+                        <div
+                          className=""
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<p>Study Title: Investigating Co-Curricular Participation of Students Underrepresented in Engineering</p>
+
+
+<p>Researchers: Anh Chau</p>
+<h4><u>Consent Information and Directions</u></h4><p>Do you participate in any activities? If so, I would like to know more about these activities. You are invited to participate in a research study that seeks to learn about students’ experiences from participating in various activities, called co/extracurricular activities, which occur outside of taking courses.</p><h4><u>Consent Information</u></h4><p>The information you provide will be used to help college and university administrators and faculty improve out of class experiences and students' ability to benefit from such experiences. It may also identify links between participation in out of class activities and commitment to engineering majors and careers.</p><p>It should take about 20 minutes to complete the survey. Persons who complete the survey will be entered into a drawing for ten (10) $25 Amazon gift cards. The odds of winning are 1 in 200.  To enter the drawing, please add your name and contact information at the end of the survey.  You are not required to enter the drawing.</p><p>There are no right or wrong answers. However, please choose your response options carefully. There are no known risks to study participants. Your responses will remain confidential. You are free to discontinue this survey at any time without  any consequences. You should be over 18 to be eligible to participate in this study. Completion of this online questionnaire will be considered as your consent to participate in this study and permission to use your data for the purposes of the study specified above.</p><p>Any questions concerning this study should be directed to Dr. Denise R. Simmons at densimm@vt.edu or (540) 553-6013. The Institutional Review Board (IRB) at Virginia Tech (VT) has approved this study. Should you have any questions or concerns about the study’s conduct or your rights as a research subject, or need to report a research-related injury or event, you may contact the VT IRB Chair, Dr. David M. Moore atmoored@vt.edu or (540) 231-4991.</p><h5><u>Directions:</u></h5><p>(1) You can use the back button to move Back and forth between pages.</p><p>(2) Hovering over words in <font color=\\"blue\\">blue ink</font> will display text, specifically examples of out-of-classroom activities and outcomes.</p><p><strong>(3) Clicking \\"agree\\" below indicates that:
+</strong>
+</p>
+<p><b>- you voluntarily agree to participate</b></p>
+<p><b>- you are at least 18 years of age</b></p>
+
+<p><b>If you do not wish to participate in the study, please decline by clicking the \\"disagree\\" button. </b></p><p></p>",
+                            }
+                          }
                         />
                       </div>
                     </div>
@@ -203,50 +154,6 @@ exports[`renders correctly with id passed to it 1`] = `
                       }
                     >
                       <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Gender"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            2
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Gender
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
                         className=""
                       >
                         <div
@@ -256,7 +163,7 @@ exports[`renders correctly with id passed to it 1`] = `
                             className="sv_select_wrapper"
                           >
                             <select
-                              aria-label="Gender"
+                              aria-label="consentQuestion"
                               className="sv_q_dropdown_control"
                               id="sq_101i"
                               onChange={[Function]}
@@ -266,590 +173,19 @@ exports[`renders correctly with id passed to it 1`] = `
                               <option
                                 value=""
                               >
-                                Select your gender here
+                                Choose...
                               </option>
                               <option
                                 disabled={false}
-                                value="2"
+                                value="agree"
                               >
-                                Woman
+                                Agree
                               </option>
                               <option
                                 disabled={false}
-                                value="1"
+                                value="disagree"
                               >
-                                Man
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Trans
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Other
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                I don't want to respond
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_102"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Race/Ethnicity"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            3
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Race/Ethnicity
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="Race/Ethnicity"
-                              className="sv_q_dropdown_control"
-                              id="sq_102i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your Race/Ethnicity here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                American Indian or Alaska Native
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Asian
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Black or African America
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Hispanic, Latino, or Spanish Origin
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Native Hawaiian or Other Pacific Islander
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                White
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="sv_row"
-            >
-              <div
-                className="sv_p_container"
-                style={
-                  Object {
-                    "width": "100.000000%",
-                  }
-                }
-              >
-                <h4
-                  className="sv_p_title"
-                >
-                  <span
-                    style={null}
-                  >
-                    College
-                  </span>
-                </h4>
-                <div
-                  style={
-                    Object {
-                      "display": "block",
-                      "paddingLeft": "",
-                    }
-                  }
-                >
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_103"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What is your enrollment status as a student?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            4
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What is your enrollment status as a student?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="What is your enrollment status as a student?"
-                              className="sv_q_dropdown_control"
-                              id="sq_103i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your enrollment status here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                Full-time
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Part-time
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_104"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What year in college are you?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            5
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What year in college are you?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="What year in college are you?"
-                              className="sv_q_dropdown_control"
-                              id="sq_104i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your year here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                First Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Second Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Third Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Fourth Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Fifth Year and Beyond
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                Graduate Student
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_105"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What is your major?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            6
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What is your major?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="What is your major?"
-                              className="sv_q_dropdown_control"
-                              id="sq_105i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your major here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                General Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Civil Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Construction
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Agricultural Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Applied Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                Biomedical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="7"
-                              >
-                                Chemical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="8"
-                              >
-                                Electrical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="9"
-                              >
-                                Engineering Management
-                              </option>
-                              <option
-                                disabled={false}
-                                value="10"
-                              >
-                                Engineering Physics
-                              </option>
-                              <option
-                                disabled={false}
-                                value="11"
-                              >
-                                Engineering Science
-                              </option>
-                              <option
-                                disabled={false}
-                                value="12"
-                              >
-                                Industrial Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="13"
-                              >
-                                Materials Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="14"
-                              >
-                                Mechanical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="15"
-                              >
-                                Nanoengineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="16"
-                              >
-                                Nuclear Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="17"
-                              >
-                                Other
+                                Disagree
                               </option>
                             </select>
                           </div>
@@ -891,7 +227,7 @@ exports[`renders correctly with id passed to it 1`] = `
       className="centered stretched row"
     >
       <button
-        centered={true}
+        centered="true"
         className="ui black basic button"
         onBlur={[Function]}
         onClick={[Function]}
@@ -950,7 +286,7 @@ exports[`renders correctly without id passed to it 1`] = `
         </div>
         <div
           className="sv_body"
-          id="sp_118"
+          id="sp_120"
         >
           <div
             className="sv_progress"
@@ -963,20 +299,20 @@ exports[`renders correctly without id passed to it 1`] = `
               role="progressbar"
               style={
                 Object {
-                  "width": "20%",
+                  "width": "17%",
                 }
               }
             >
               <span
                 className="undefined sv-hidden"
               >
-                Page 1 of 5
+                Page 1 of 6
               </span>
             </div>
             <span
               className="undefined undefined"
             >
-              Page 1 of 5
+              Page 1 of 6
             </span>
           </div>
           <div
@@ -988,7 +324,7 @@ exports[`renders correctly without id passed to it 1`] = `
               <span
                 style={null}
               >
-                Demographics
+                
               </span>
             </h4>
             <div
@@ -1011,15 +347,6 @@ exports[`renders correctly without id passed to it 1`] = `
                   }
                 }
               >
-                <h4
-                  className="sv_p_title"
-                >
-                  <span
-                    style={null}
-                  >
-                    General
-                  </span>
-                </h4>
                 <div
                   style={
                     Object {
@@ -1028,196 +355,6 @@ exports[`renders correctly without id passed to it 1`] = `
                     }
                   }
                 >
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_149"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Age"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            1
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Age
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            *
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <input
-                          aria-label="Age"
-                          aria-required={true}
-                          className="sv_q_text_root"
-                          disabled={false}
-                          id="sq_149i"
-                          maxLength={null}
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your age here"
-                          size={25}
-                          type="number"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_150"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Gender"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            2
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Gender
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="Gender"
-                              className="sv_q_dropdown_control"
-                              id="sq_150i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your gender here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Woman
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                Man
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Trans
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Other
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                I don't want to respond
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div
                     className="sv_row"
                   >
@@ -1231,144 +368,29 @@ exports[`renders correctly without id passed to it 1`] = `
                       }
                     >
                       <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="Race/Ethnicity"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            3
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            Race/Ethnicity
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
                         className=""
                       >
                         <div
                           className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="Race/Ethnicity"
-                              className="sv_q_dropdown_control"
-                              id="sq_151i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your Race/Ethnicity here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                American Indian or Alaska Native
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Asian
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Black or African America
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Hispanic, Latino, or Spanish Origin
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Native Hawaiian or Other Pacific Islander
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                White
-                              </option>
-                            </select>
-                          </div>
-                        </div>
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<p>Study Title: Investigating Co-Curricular Participation of Students Underrepresented in Engineering</p>
+
+
+<p>Researchers: Anh Chau</p>
+<h4><u>Consent Information and Directions</u></h4><p>Do you participate in any activities? If so, I would like to know more about these activities. You are invited to participate in a research study that seeks to learn about students’ experiences from participating in various activities, called co/extracurricular activities, which occur outside of taking courses.</p><h4><u>Consent Information</u></h4><p>The information you provide will be used to help college and university administrators and faculty improve out of class experiences and students' ability to benefit from such experiences. It may also identify links between participation in out of class activities and commitment to engineering majors and careers.</p><p>It should take about 20 minutes to complete the survey. Persons who complete the survey will be entered into a drawing for ten (10) $25 Amazon gift cards. The odds of winning are 1 in 200.  To enter the drawing, please add your name and contact information at the end of the survey.  You are not required to enter the drawing.</p><p>There are no right or wrong answers. However, please choose your response options carefully. There are no known risks to study participants. Your responses will remain confidential. You are free to discontinue this survey at any time without  any consequences. You should be over 18 to be eligible to participate in this study. Completion of this online questionnaire will be considered as your consent to participate in this study and permission to use your data for the purposes of the study specified above.</p><p>Any questions concerning this study should be directed to Dr. Denise R. Simmons at densimm@vt.edu or (540) 553-6013. The Institutional Review Board (IRB) at Virginia Tech (VT) has approved this study. Should you have any questions or concerns about the study’s conduct or your rights as a research subject, or need to report a research-related injury or event, you may contact the VT IRB Chair, Dr. David M. Moore atmoored@vt.edu or (540) 231-4991.</p><h5><u>Directions:</u></h5><p>(1) You can use the back button to move Back and forth between pages.</p><p>(2) Hovering over words in <font color=\\"blue\\">blue ink</font> will display text, specifically examples of out-of-classroom activities and outcomes.</p><p><strong>(3) Clicking \\"agree\\" below indicates that:
+</strong>
+</p>
+<p><b>- you voluntarily agree to participate</b></p>
+<p><b>- you are at least 18 years of age</b></p>
+
+<p><b>If you do not wish to participate in the study, please decline by clicking the \\"disagree\\" button. </b></p><p></p>",
+                            }
+                          }
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="sv_row"
-            >
-              <div
-                className="sv_p_container"
-                style={
-                  Object {
-                    "width": "100.000000%",
-                  }
-                }
-              >
-                <h4
-                  className="sv_p_title"
-                >
-                  <span
-                    style={null}
-                  >
-                    College
-                  </span>
-                </h4>
-                <div
-                  style={
-                    Object {
-                      "display": "block",
-                      "paddingLeft": "",
-                    }
-                  }
-                >
                   <div
                     className="sv_row"
                   >
@@ -1382,50 +404,6 @@ exports[`renders correctly without id passed to it 1`] = `
                       }
                     >
                       <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What is your enrollment status as a student?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            4
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What is your enrollment status as a student?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
                         className=""
                       >
                         <div
@@ -1435,7 +413,7 @@ exports[`renders correctly without id passed to it 1`] = `
                             className="sv_select_wrapper"
                           >
                             <select
-                              aria-label="What is your enrollment status as a student?"
+                              aria-label="consentQuestion"
                               className="sv_q_dropdown_control"
                               id="sq_152i"
                               onChange={[Function]}
@@ -1445,325 +423,19 @@ exports[`renders correctly without id passed to it 1`] = `
                               <option
                                 value=""
                               >
-                                Select your enrollment status here
+                                Choose...
                               </option>
                               <option
                                 disabled={false}
-                                value="1"
+                                value="agree"
                               >
-                                Full-time
+                                Agree
                               </option>
                               <option
                                 disabled={false}
-                                value="2"
+                                value="disagree"
                               >
-                                Part-time
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_153"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What year in college are you?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            5
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What year in college are you?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="What year in college are you?"
-                              className="sv_q_dropdown_control"
-                              id="sq_153i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your year here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                First Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Second Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Third Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Fourth Year
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Fifth Year and Beyond
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                Graduate Student
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="sv_row"
-                  >
-                    <div
-                      className="sv_q sv_qstn"
-                      id="sq_154"
-                      style={
-                        Object {
-                          "width": "100.000000%",
-                        }
-                      }
-                    >
-                      <div
-                        className=" undefined"
-                      >
-                        <h5
-                          className="sv_q_title"
-                          title="What is your major?"
-                        >
-                          <span
-                            className="sv_q_num"
-                            style={
-                              Object {
-                                "position": "static",
-                              }
-                            }
-                          >
-                            6
-                          </span>
-                          <span
-                            className="sv_q_num"
-                          >
-                            .
-                             
-                          </span>
-                          <span
-                            style={null}
-                          >
-                            What is your major?
-                          </span>
-                          <span
-                            className="sv_q_required_text"
-                          >
-                            
-                          </span>
-                        </h5>
-                        <div
-                          className="sv_q_description"
-                        >
-                          <span
-                            style={null}
-                          >
-                            
-                          </span>
-                        </div>
-                      </div>
-                      <div
-                        className=""
-                      >
-                        <div
-                          className=""
-                        >
-                          <div
-                            className="sv_select_wrapper"
-                          >
-                            <select
-                              aria-label="What is your major?"
-                              className="sv_q_dropdown_control"
-                              id="sq_154i"
-                              onChange={[Function]}
-                              onInput={[Function]}
-                              value=""
-                            >
-                              <option
-                                value=""
-                              >
-                                Select your major here
-                              </option>
-                              <option
-                                disabled={false}
-                                value="1"
-                              >
-                                General Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="2"
-                              >
-                                Civil Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="3"
-                              >
-                                Construction
-                              </option>
-                              <option
-                                disabled={false}
-                                value="4"
-                              >
-                                Agricultural Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="5"
-                              >
-                                Applied Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="6"
-                              >
-                                Biomedical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="7"
-                              >
-                                Chemical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="8"
-                              >
-                                Electrical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="9"
-                              >
-                                Engineering Management
-                              </option>
-                              <option
-                                disabled={false}
-                                value="10"
-                              >
-                                Engineering Physics
-                              </option>
-                              <option
-                                disabled={false}
-                                value="11"
-                              >
-                                Engineering Science
-                              </option>
-                              <option
-                                disabled={false}
-                                value="12"
-                              >
-                                Industrial Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="13"
-                              >
-                                Materials Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="14"
-                              >
-                                Mechanical Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="15"
-                              >
-                                Nanoengineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="16"
-                              >
-                                Nuclear Engineering
-                              </option>
-                              <option
-                                disabled={false}
-                                value="17"
-                              >
-                                Other
+                                Disagree
                               </option>
                             </select>
                           </div>
@@ -1805,7 +477,7 @@ exports[`renders correctly without id passed to it 1`] = `
       className="centered stretched row"
     >
       <button
-        centered={true}
+        centered="true"
         className="ui black basic button"
         onBlur={[Function]}
         onClick={[Function]}
